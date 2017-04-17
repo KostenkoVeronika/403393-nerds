@@ -1,12 +1,163 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header class="main-header">
+      <div class="container">
+        <div class="logo-main">
+          <img src="#" alt="Логотип Нёрдс" width="#" height="#"> 
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a class="cart-link" href="#">Корзина</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider-item">
+          <b>Долго, дорого, скрупулезно.</b>
+          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a href="#">Узнать больше</a>
+        </div>
+        <div class="slider-item">
+          <b>Любим математику как никто другой</b>
+          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+          <a href="#">Узнать больше</a>
+        </div>
+        <div class="slider-item">
+          <b>Только ночь, только хардкор</b>
+          <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+          <a href="#">Узнать больше</a>
+        </div>
+        <div class="slider-indicator">
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+        </div>
+        <!--Не понимаю как "оживить" слайдер. Содержание я описала, но по логике должно быть какое-то управление слайдером. И эти точечки-индикаторы: обычно на сайтах, если нажать на такую точечку происходит переключение слайда. То есть это ссылки? Как тогда href написать? Идентификатор ввести для каждого слайда? Короче, не понимаю.-->
+      </div>
+    </header>
+    <main class="container">
+      <div class="advantages">
+        <article class="advantages-site">
+          <h2>Веб-сайты</h2>
+          <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
+          <a href="#">Заказать</a>
+        </article>
+        <article class="advantages-app">
+          <h2>Приложения</h2>
+          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a href="#">Заказать</a>
+        </article>
+        <article class="advantages-show">
+          <h2>Презентации</h2>
+          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a href="#">Заказать</a>
+        </article>
+      </div>
+      <div class="studio">
+        <div class="studio-about">
+          <h3>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h3>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+          <b>Выполняем заказы на разработку:</b>
+          <ul class="studio-about-list">
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div class="studio-addition">
+          <img class="logo-color" src="#" alt="Цветной логотип" width="#" height="#">
+          <b>С 2004 года любим точность во всем:</b>
+          <table class="studio-addition-table">
+            <tr class="studio-table-percent">
+              <td>146%</td>
+              <td>100%</td>
+              <td>50%</td>
+            </tr>
+            <tr class="studio-table-meaning">
+              <td>Уровень самоотдачи</td>
+              <td>Соблюдение сроков</td>
+              <td>Минимальная предоплата</td>
+            </tr>
+          </table>
+        </div>
+        <div class="studio-links">
+          <table class="studio-links-table">
+            <tr>
+              <td>
+                <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="html academy" width="#" height="#"></a>
+              </td>
+              <td>
+                <a href="#"><img src="#" alt="barbershop borodinski" width="#" height="#"></a>
+              </td>
+              <td>
+                <a href="#"><img src="#" alt="pink" width="#" height="#"></a>
+              </td>
+              <td>
+                <a href="#"><img src="#" alt="mishka" width="#" height="#"></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+       <div class="footer-contacts">
+          <div class="footer-contacts-map">
+            <!--Не знаю как сделать карту, чтоб она была именно картой с отметкой нужного дома. Если делать как изображение, то можно задать просто фоном в CSS или надо вставлять img? Или может быть это ссылкой-изображением на гугл-карты или на яндекс-карты?-->
+          </div>
+          <section class="footer-contacts-nerds">
+            <h4>Nёrds design studio</h4>
+            <p>
+            191186, Санкт-Петербург, 
+              <br>
+            ул. Б. Конюшенная, д. 19/8
+            </p>
+            <p>тел. +7 (812) 275-75-75</p>
+            <button>Напишите нам</button>
+            <!--Как для кнопки сделать, чтобы она была связана с формой write us?-->
+          </section>
+          <form class="footer-write-us" action="#" method="post">
+            <span>Напишите нам</span>
+            <button class="write-us-close">X</button>
+            <label for="name">Ваше имя:</label>
+            <input id="name" placeholder="Представьтесь, пожалуйста">
+            <label for="e-mail">Ваш e-mail:</label>
+            <input id="e-mail" placeholder="Для отправки ответа">
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" placeholder="В свободной форме"></textarea>
+            <input type="submit" value="Отправить">
+          </form>
+        </div>
+        <section class="footer-social">
+          <a class="footer-social-vk" href="#">vk</a>
+          <a class="footer-social-fb" href="#">fb</a>
+          <a class="footer-social-ig" href="#">ig</a>
+        </section>
+        <div class="footer-social-text">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

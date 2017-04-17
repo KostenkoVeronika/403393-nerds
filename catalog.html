@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="logo-main">
+          <a href="index.html"><img src="#" alt="Логотип Нёрдс" width="#" height="#"></a> 
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a class="cart-link" href="#">Корзина</a>
+        </div>
+      </div>
+      <h1>Магазин готовых шаблонов</h1>
+    </header>
+    <main class="container">
+      <div class="price">
+       <h2>Стоимость:</h2>
+       <!--Пока не знаю как сделать коробку с маркерами-->
+       <table class="price-range">
+         <tr>
+           <td>от</td>
+           <td>0</td>
+           <td>до</td>
+          <td>15000</td>
+         </tr>
+       </table>
+      </div>
+      <form class="filter" action="#" method="get">
+        <h2>Сетка:</h2>
+        <label>
+          <input type="radio" name="grid" value="adaptive" checked>
+          Адаптивная
+        </label>
+        <label>
+          <input type="radio" name="grid" value="fixated">
+          Фиксированная
+        </label>
+        <label>
+          <input type="radio" name="grid" value="rubber">
+          Резиновая
+        </label>
+        <h2>Особенности:</h2>
+        <label>
+          <input type="checkbox" checked>
+          Слайдер
+        </label>
+        <label>
+          <input type="checkbox">
+          Блок преимуществ
+        </label>
+        <label>
+          <input type="checkbox" checked>
+          Новости
+        </label>
+        <label>
+          <input type="checkbox">
+          Галерея
+        </label>
+        <label>
+          <input type="checkbox">
+          Корзина
+        </label>
+        <input type="submit" value="Показать">
+      </form>
+      <div class="items">
+        <section class="sort">
+          <h2>Сортировать:</h2>
+          <span class="items-sort-how">По цене</span>
+          <span class="items-sort-how">По типу</span>
+          <span class="items-sort-how">По названию</span>
+          <span class="items-sort-how">По убыванию</span>
+          <span class="items-sort-how">По возрастанию</span>
+        </section>
+        <article class="items-sedona">
+          <img src="#" alt="Sedona" width="#" height="#">
+          <section class="items-sedona-buy">
+            <a class="sedona-buy-info" href="#">Sedona</a>
+            <p>Информационный сайт для туристов</p>
+            <a class="sedona-buy-do" href="#">9900 руб.</a>
+          </section>
+          <!--Как сделать, чтобы блок с ценой при наведении появлялся на картинке-карточке? Это CSS?-->
+        </article>
+        <article class="items-pink">
+          <img src="#" alt="Pink" width="#" height="#">
+          <section class="items-pink-buy">
+            <a class="pink-buy-info" href="#">Pink app</a>
+            <p>Продуктовый лендинг приложения для iOS и Android</p>
+            <a class="pink-buy-do" href="#">9900 руб.</a>
+          </section>
+        </article>
+        <article class="items-barbershop">
+          <img src="#" alt="Barbershop" width="#" height="#">
+          <section class="items-barbershop-buy">
+            <a class="barbershop-buy-info" href="#">Barbershop</a>
+            <p>
+              Сайт салона красоты. 
+                <br> <!--Нужно ли br?-->
+              Для мужчин, да</p>
+            <a class="barbershop-buy-do" href="#">9900 руб.</a>
+          </section>
+        </article>
+        <article class="items-mishka">
+          <img src="#" alt="Mishka" width="#" height="#">
+          <section class="items-mishka-buy">
+            <a class="mishka-buy-info" href="#">Mishka</a>
+            <p>Интернет-магазин вязаных игрушек</p>
+            <a class="mishka-buy-do" href="#">9900 руб.</a>
+          </section>
+        </article>
+        <article class="items-aplus">
+          <img src="#" alt="Aplus" width="#" height="#">
+          <section class="items-aplus-buy">
+            <a class="aplus-buy-info" href="#">A plus</a>
+            <p>Лендинг курсов повышения квалификации</p>
+            <a class="aplus-buy-do" href="#">9900 руб.</a>
+          </section>
+        </article>
+        <article class="items-kvast">
+          <img src="#" alt="Kvast" width="#" height="#">
+          <section class="items-kvast-buy">
+            <a class="kvast-buy-info" href="#">Кваст</a>
+            <p>Промо-сайт производителя крафтового кваса</p>
+            <a class="kvast-buy-do" href="#">9900 руб.</a>
+          </section>
+        </article>
+        <ul class="items-pages">
+          <li>
+            1
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">Следующая</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+       <div class="footer-contacts">
+          <div class="footer-contacts-map">
+            <!--Не знаю как сделать карту, чтоб она была именно картой с отметкой нужного дома. Если делать как изображение, то можно задать просто фоном в CSS или надо вставлять img? Или может быть это ссылкой-изображением на гугл-карты или на яндекс-карты?-->
+          </div>
+          <section class="footer-contacts-nerds">
+            <h4>Nёrds design studio</h4>
+            <p>
+            191186, Санкт-Петербург, 
+              <br>
+            ул. Б. Конюшенная, д. 19/8
+            </p>
+            <p>тел. +7 (812) 275-75-75</p>
+            <button>Напишите нам</button>
+            <!--Как для кнопки сделать, чтобы она была связана с формой write us?-->
+          </section>
+          <form class="footer-write-us" action="#" method="post">
+            <span>Напишите нам</span>
+            <button class="write-us-close">X</button>
+            <label for="name">Ваше имя:</label>
+            <input id="name" placeholder="Представьтесь, пожалуйста">
+            <label for="e-mail">Ваш e-mail:</label>
+            <input id="e-mail" placeholder="Для отправки ответа">
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" placeholder="В свободной форме"></textarea>
+            <input type="submit" value="Отправить">
+          </form>
+        </div>
+        <section class="footer-social">
+          <a class="footer-social-vk" href="#">vk</a>
+          <a class="footer-social-fb" href="#">fb</a>
+          <a class="footer-social-ig" href="#">ig</a>
+        </section>
+        <div class="footer-social-text">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
