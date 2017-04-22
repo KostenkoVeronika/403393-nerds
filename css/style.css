@@ -1,0 +1,23 @@
+body {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(40,49,54);
+  font-weight: 400;
+  font-family: roboto;
+}
+
+.slider-title {
+  font-size: 55px;
+  line-height: 55px;
+  color: rgb(0,0,0);
+  font-weight: 500;
+  font-family: roboto;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 30px;
+  color: rgb(0,0,0);
+  font-weight: 700;
+  font-family: roboto;
+}
