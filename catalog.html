@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <div class="logo-main">
           <a href="index.html"><img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"></a> 
         </div>
@@ -30,10 +30,10 @@
         <div class="cart">
           <a class="cart-link" href="#">Корзина</a>
         </div>
-        <h1 class="slider-title">Магазин готовых шаблонов</h1>
+        <h1 class="slider-title inside-title">Магазин готовых шаблонов</h1>
       </div>
     </header>
-    <main class="container">
+    <main class="container clearfix">
       <div class="left-side">
         <form class="filter" action="#" method="get">
           <fieldset class="price">
@@ -82,8 +82,8 @@
         </form>
       </div>
       <div class="right-side">
-        <div class="sort">
-          <h2>Сортировать:</h2>
+        <div class="sort clearfix">
+          <h2 class="sort-text">Сортировать:</h2>
           <div class="sort-box">
             <span class="sort-how">По цене</span>
             <span class="sort-how">По типу</span>
@@ -159,12 +159,12 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container">
+      <div class="container footer clearfix">
         <div class="footer-contacts">
           <div class="footer-contacts-map">
             <img src="img/footer-map-small.png" alt="map" width="1440" height="416">
           </div>
-          <section class="footer-contacts-nerds">
+          <section class="footer-contacts-nerds hide">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -174,7 +174,7 @@
             <p>тел. +7 (812) 275-75-75</p>
             <button>Напишите нам</button>
           </section>
-          <form class="footer-write-us" action="#" method="post">
+          <form class="footer-write-us hide" action="#" method="post">
             <span>Напишите нам</span>
             <button class="write-us-close">X</button>
             <label for="name">Ваше имя:</label>

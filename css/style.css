@@ -1,3 +1,4 @@
+/*шрифты для тела - задание про фотошоп*/
 body {
   font-size: 16px;
   line-height: 24px;
@@ -6,6 +7,7 @@ body {
   font-family: roboto;
 }
 
+/*шрифты для заголовка слайдера в голове*/
 .slider-title {
   font-size: 55px;
   line-height: 55px;
@@ -14,10 +16,318 @@ body {
   font-family: roboto;
 }
 
+/*шрифты для преимуществ*/
 .advantages-title {
   font-size: 24px;
   line-height: 30px;
   color: rgb(0,0,0);
   font-weight: 700;
   font-family: roboto;
+}
+
+/*цвет для заголовка. чтобы было видно*/
+.main-header {
+  background-color: blue;
+}
+
+/*для контейнеров*/
+.container {
+  background-color: bisque;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+/*левый блок с фильтром - каталог*/
+.left-side {
+  background-color: darkgoldenrod;
+  width: 260px;
+  float: left;
+  min-height: 773px;
+  padding-top: 10px;
+}
+
+/*правый блок с товарами - каталог*/
+.right-side {
+  background-color: darkgray;
+  width: 760px;
+  float: right;
+  margin-bottom: 27px;
+}
+
+/*фильтр цена - каталог*/
+.price {
+  background-color: azure;
+  min-height: 233px;
+  margin-bottom: 10px;
+}
+
+/*фильтр сетка - каталог*/
+.grid {
+  background-color: azure;
+  min-height: 156px;
+  margin-bottom: 10px;
+}
+
+/*фильтр особенности - каталог*/
+.features {
+  background-color: azure;
+  min-height: 259px;
+}
+
+/*сортировка по переметрам - каталог*/
+.sort {
+  background-color: crimson;
+  margin-bottom: 42px;
+}
+
+/*надпись сортировать - каталог*/
+.sort-text {
+  background-color: aliceblue;
+  width: 200px;
+  float: left;
+  min-height: 40px;
+  margin: 0px; /*откуда отступ был?*/
+}
+
+/*коробка - параметры сортировки - каталог*/
+.sort-box {
+  background-color: aliceblue;
+  width: 500px;
+  float: right;
+  min-height: 40px;
+}
+
+/*параметры сортировки - каталог*/
+.sort-how {
+  display: inline-block;
+}
+
+/*каталог - обнуляется шрифт, чтобы карточки не уходили ниже*/
+.catalog {
+  background-color: blueviolet;
+  font-size: 0px;
+}
+
+/*сами карточки - каталог*/
+.catalog-item {
+  background-color: crimson;
+  min-height: 616px;
+  width: 360px;
+  display: inline-block;
+  margin-bottom: 36px;
+  margin-right: 40px;
+  /*перед нижними двумя карточками отступы больше на несколько пикселей. Не 36, а где-то 40. Что с ними делать?*/
+}
+
+/*каталог - обнуление отступов у четных карточек*/
+.catalog-item:nth-child(2n) {
+  margin-right: 0px;
+}
+
+/*наезжающее на карточку поле временно спрятано*/
+.catalog-item-buy {
+  display: none;
+}
+
+/*блок с пагинацией - каталог*/
+.pagination {
+  background-color: cadetblue;
+  min-height: 100px;
+  margin: 0px; /*откуда берутся эти отступы???*/
+}
+
+/*сами страницы - каталог*/
+.pagination li {
+  display: inline-block;
+}
+
+
+
+/*настройки верхнего логотипа*/
+.logo-main {
+  background-color: aquamarine;
+  height: 65px;
+  width: 160px;
+  float: left;
+  margin-right: 100px;
+}
+
+/*главное меню наверху*/
+.main-navigation {
+  background-color: aquamarine;
+  min-height: 65px;
+  width: 640px;
+  float: left;
+  margin-right: 100px;
+}
+
+/*пункты верхнего меню*/
+.main-navigation li {
+  display: inline-block;
+}
+
+/*корзина*/
+.cart {
+  background-color: aquamarine;
+  min-height: 65px;
+  width: 160px;
+  float: right;
+}
+
+/*слайдер на главной странице*/
+.slider {
+  background-color: aqua;
+  min-height: 430px;
+  clear: both;
+}
+
+/*большой заголовок вместо слайдера для внутренней страницы*/
+.inside-title {
+  background-color: cyan;
+  min-height: 40px;
+  padding-top: 76px;
+  padding-bottom: 111px;
+  padding-left: 220px;
+  padding-right: 200px;
+  clear: both;
+  margin-bottom: 0px; /*какой-то странный отступ. убрала.*/
+}
+
+/*добавлен временно для того, чтобы убрать элементы которых не видно*/
+.hide {
+  display: none;
+}
+
+/*блок преимуществ - главная*/
+.advantages {
+  background-color: aquamarine;
+  padding-bottom: 81px;
+  padding-top: 30px;
+  
+}
+
+/*преимущество - главная*/
+.advantages-site {
+  background-color: red;
+  width: 300px;
+  min-height: 347px;
+  float: left;
+  margin-right: 100px;
+}
+
+/*преимущество - главная*/
+.advantages-app {
+  background-color: green;
+  width: 300px;
+  min-height: 347px;
+  float: left;
+}
+
+/*преимущество - главная*/
+.advantages-show {
+  background-color: yellow;
+  width: 300px;
+  min-height: 347px;
+  float: right;
+  margin-right: 60px;
+}
+
+/*блок студия - главная*/
+.studio {
+  background-color: aqua;
+  padding-top: 40px;
+  padding-bottom: 79px;
+}
+
+/*блок с текстом - главная*/
+.studio-about {
+  background-color: crimson;
+  width: 700px;
+  float: left;
+  min-height: 408px;
+}
+
+/*блок с картинкой и процентами - главная*/
+.studio-addition {
+  background-color: brown;
+  width: 360px;
+  float: right;
+  min-height: 408px;
+}
+
+/*блок партнеры - главная*/
+.studio-partners {
+  background-color: aquamarine;
+  margin-bottom: 81px;
+  margin-top: 0px;      /*откуда-то появился отступ*/
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*отдельный партнер - главная*/
+.studio-partners li {
+  background-color: chartreuse;
+  display: inline-block;
+  min-height: 102px;
+  vertical-align: middle;
+  /*не понимаю как их выровнять. расстояния между ними по макету разные*/
+}
+
+/*подвал цветом чтоб было видно*/
+.main-footer {
+  background-color: blue;
+}
+
+/*контейнер для подвала*/
+.container.footer {
+  /*создала новый класс футер. Потому что обычный контейнер сошел с ума и не убирал паддинги для карты. И карта постоянно уезжала вправо.*/
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  
+}
+
+/*карта подвала*/
+.footer-contacts-map {
+  height: 416px;
+}
+
+/*блок с контактами который должен лежать на карте*/
+.footer-contacts-nerds {
+  background-color: aqua;
+  min-height: 214px;
+  width: 225px;
+  padding: 47px;
+  float: left;
+  /*временно спрятан, потому что не знаю как положить его сверху на карту*/
+}
+
+/*соцсети в подвале*/
+.footer-social {
+  background-color: coral;
+  min-height: 217px;
+  float:left;
+  width: 260px;
+  margin-left: 140px;
+}
+
+/*текст в подвале*/
+.footer-social-text {
+  background-color: coral;
+  min-height: 217px;
+  float: right;
+  width: 640px;
+  margin-right: 300px;
+}
+
+/*чтоб не выпадало*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
