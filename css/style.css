@@ -5,6 +5,11 @@ body {
   color: rgb(40,49,54);
   font-weight: 400;
   font-family: roboto;
+  margin: 0; /*не видела отступов по умолчанию у боди, но обнулила*/
+  padding: 0; /*и эти тоже обнулила*/
+  width: 1440px; /*задала ширину по макету. но она меньше экрана, выровняла.*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*шрифты для заголовка слайдера в голове*/
@@ -37,8 +42,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*левый блок с фильтром - каталог*/
@@ -162,7 +167,7 @@ body {
   min-height: 65px;
   width: 640px;
   float: left;
-  margin-right: 100px;
+ 
 }
 
 /*пункты верхнего меню*/
@@ -207,34 +212,23 @@ body {
   background-color: aquamarine;
   padding-bottom: 81px;
   padding-top: 30px;
+  font-size: 0;
   
 }
 
 /*преимущество - главная*/
-.advantages-site {
+.advantages-item {
   background-color: red;
   width: 300px;
   min-height: 347px;
-  float: left;
+  display: inline-block;
   margin-right: 100px;
 }
 
-/*преимущество - главная*/
-.advantages-app {
-  background-color: green;
-  width: 300px;
-  min-height: 347px;
-  float: left;
-}
-
-/*преимущество - главная*/
-.advantages-show {
-  background-color: yellow;
-  width: 300px;
-  min-height: 347px;
-  float: right;
+.advantages-item:last-child {
   margin-right: 60px;
 }
+
 
 /*блок студия - главная*/
 .studio {
@@ -263,9 +257,9 @@ body {
 .studio-partners {
   background-color: aquamarine;
   margin-bottom: 81px;
-  margin-top: 0px;      /*откуда-то появился отступ*/
   padding-top: 40px;
   padding-bottom: 40px;
+  font-size: 0;
 }
 
 /*отдельный партнер - главная*/
@@ -274,27 +268,36 @@ body {
   display: inline-block;
   min-height: 102px;
   vertical-align: middle;
-  /*не понимаю как их выровнять. расстояния между ними по макету разные*/
+}
+
+/*Выравнивание партнеров. Первый отрицательный.*/
+.partner-1 {
+  margin-left: -10px;
+}
+
+.partner-2 {
+  margin-left: 96px;
+}
+
+.partner-3 {
+  margin-left: 103px;
+}
+
+.partner-4 {
+  margin-left: 121px;
 }
 
 /*подвал цветом чтоб было видно*/
 .main-footer {
   background-color: blue;
 }
-
-/*контейнер для подвала*/
-.container.footer {
-  /*создала новый класс футер. Потому что обычный контейнер сошел с ума и не убирал паддинги для карты. И карта постоянно уезжала вправо.*/
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px;
   
-}
-
 /*карта подвала*/
 .footer-contacts-map {
   height: 416px;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*блок с контактами который должен лежать на карте*/
@@ -310,19 +313,17 @@ body {
 /*соцсети в подвале*/
 .footer-social {
   background-color: coral;
-  min-height: 217px;
   float:left;
   width: 260px;
-  margin-left: 140px;
+
 }
 
 /*текст в подвале*/
 .footer-social-text {
   background-color: coral;
-  min-height: 217px;
   float: right;
-  width: 640px;
-  margin-right: 300px;
+  width: 800px;
+  
 }
 
 /*чтоб не выпадало*/
