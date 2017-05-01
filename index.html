@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -55,7 +57,7 @@
       </div>
     </header>
     <main class="container clearfix">
-      <div class="advantages clearfix">
+      <div class="advantages">
         <article class="advantages-item">
           <h2 class="advantages-title">Веб-сайты</h2>
           <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
@@ -101,28 +103,25 @@
         </div>
       </div>  
       <ul class="studio-partners">
-        <li class="partner-1">
+        <li>
           <a class="studio-partners-item" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/partners-html-academy.png" alt="html academy" width="199" height="68"></a>
         </li>
-        <li class="partner-2">
+        <li>
           <a class="studio-partners-item" href="#"><img src="img/partners-barbershop.png" alt="barbershop" width="209" height="90"></a>
         </li>
-        <li class="partner-3">
+        <li>
           <a class="studio-partners-item" href="#"><img src="img/partners-pink.png" alt="pink" width="185" height="52"></a>
         </li>
-        <li class="partner-4">
+        <li>
           <a class="studio-partners-item" href="#"><img src="img/partners-mishka.png" alt="mishka" width="173" height="84"></a>
         </li>
       </ul>
     </main>
     <footer class="main-footer">
-      <div class="footer-contacts-map">
-           <img src="img/footer-map-small.png" alt="map" width="1440" height="416">
-      </div>
-      <div class="container clearfix">
-        <div class="footer-contacts">
-          <!--Переставила карту-->
-          <section class="footer-contacts-nerds hide">
+      <div class="container-footer-top"
+        <div class="footer-map">
+          <img class = "footer-map-img" src="img/footer-map-small.png" alt="map" width="1160" height="416">
+          <section class="footer-map-nerds hide">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -132,6 +131,10 @@
             <p>тел. +7 (812) 275-75-75</p>
             <button>Напишите нам</button>
           </section>
+        </div>
+      </div>
+      <div class="container-footer-bottom clearfix">
+        <div class="footer-contacts">
           <form class="footer-write-us hide" action="#" method="post">
             <span>Напишите нам</span>
             <button class="write-us-close">X</button>

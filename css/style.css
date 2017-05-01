@@ -4,12 +4,13 @@ body {
   line-height: 24px;
   color: rgb(40,49,54);
   font-weight: 400;
-  font-family: roboto;
-  margin: 0; /*не видела отступов по умолчанию у боди, но обнулила*/
-  padding: 0; /*и эти тоже обнулила*/
-  width: 1440px; /*задала ширину по макету. но она меньше экрана, выровняла.*/
+  font-family: "roboto", "arial", sans-serif;
+  margin: 0; 
+  padding: 0; 
+  min-width: 1200px; 
   margin-left: auto;
   margin-right: auto;
+  background-color: rgb(255, 255, 255);
 }
 
 /*шрифты для заголовка слайдера в голове*/
@@ -18,7 +19,7 @@ body {
   line-height: 55px;
   color: rgb(0,0,0);
   font-weight: 500;
-  font-family: roboto;
+  font-family: "roboto", "arial", sans-serif;
 }
 
 /*шрифты для преимуществ*/
@@ -27,7 +28,7 @@ body {
   line-height: 30px;
   color: rgb(0,0,0);
   font-weight: 700;
-  font-family: roboto;
+  font-family: "roboto", "arial", sans-serif;
 }
 
 /*цвет для заголовка. чтобы было видно*/
@@ -42,6 +43,16 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container-footer-top,
+.container-footer-bottom {
+  background-color: darkseagreen;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -61,26 +72,6 @@ body {
   width: 760px;
   float: right;
   margin-bottom: 27px;
-}
-
-/*фильтр цена - каталог*/
-.price {
-  background-color: azure;
-  min-height: 233px;
-  margin-bottom: 10px;
-}
-
-/*фильтр сетка - каталог*/
-.grid {
-  background-color: azure;
-  min-height: 156px;
-  margin-bottom: 10px;
-}
-
-/*фильтр особенности - каталог*/
-.features {
-  background-color: azure;
-  min-height: 259px;
 }
 
 /*сортировка по переметрам - каталог*/
@@ -104,6 +95,14 @@ body {
   width: 500px;
   float: right;
   min-height: 40px;
+}
+
+.sort-updown {
+  display: inline-block;
+}
+
+.sort-common {
+  display: inline-block;
 }
 
 /*параметры сортировки - каталог*/
@@ -225,7 +224,7 @@ body {
   margin-right: 100px;
 }
 
-.advantages-item:last-child {
+.advantages-item:nth-child(3n) {
   margin-right: 60px;
 }
 
@@ -259,6 +258,7 @@ body {
   margin-bottom: 81px;
   padding-top: 40px;
   padding-bottom: 40px;
+  padding-left: 0;
   font-size: 0;
 }
 
@@ -267,24 +267,13 @@ body {
   background-color: chartreuse;
   display: inline-block;
   min-height: 102px;
+  width: 260px;
+  margin-right: 40px;
   vertical-align: middle;
 }
 
-/*Выравнивание партнеров. Первый отрицательный.*/
-.partner-1 {
-  margin-left: -10px;
-}
-
-.partner-2 {
-  margin-left: 96px;
-}
-
-.partner-3 {
-  margin-left: 103px;
-}
-
-.partner-4 {
-  margin-left: 121px;
+.studio-partners li:nth-child(4n) {
+  margin-right: 0;
 }
 
 /*подвал цветом чтоб было видно*/
@@ -293,9 +282,9 @@ body {
 }
   
 /*карта подвала*/
-.footer-contacts-map {
+.footer-map-img {
   height: 416px;
-  width: 1440px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

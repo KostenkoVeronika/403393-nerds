@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -36,44 +38,44 @@
     <main class="container clearfix">
       <div class="left-side">
         <form class="filter" action="#" method="get">
-          <fieldset class="price">
-            <legend>Стоимость:</legend>
+          <fieldset>
+            <legend class="filter-title">Стоимость:</legend>
             <input type="range">
           </fieldset>
-          <fieldset class="grid">
-            <legend>Сетка:</legend>
-            <label>
+          <fieldset>
+            <legend class="filter-title">Сетка:</legend>
+            <label class="filter-item">
               <input type="radio" name="grid" value="adaptive" checked>
               Адаптивная
             </label>
-            <label>
+            <label class="filter-item">
               <input type="radio" name="grid" value="fixated">
               Фиксированная
             </label>
-            <label>
+            <label class="filter-item">
               <input type="radio" name="grid" value="rubber">
               Резиновая
             </label>
           </fieldset>
-          <fieldset class="features">
-            <legend>Особенности:</legend>
-            <label>
+          <fieldset>
+            <legend class="filter-title">Особенности:</legend>
+            <label class="filter-item">
               <input type="checkbox" checked>
               Слайдер
             </label>
-            <label>
+            <label class="filter-item">
               <input type="checkbox">
               Блок преимуществ
             </label>
-            <label>
+            <label class="filter-item">
               <input type="checkbox" checked>
               Новости
             </label>
-            <label>
+            <label class="filter-item">
               <input type="checkbox">
               Галерея
             </label>
-            <label>
+            <label class="filter-item">
               <input type="checkbox">
               Корзина
             </label>
@@ -83,18 +85,24 @@
       </div>
       <div class="right-side">
         <div class="sort clearfix">
-          <h2 class="sort-text">Сортировать:</h2>
+          <b class="sort-text">Сортировать:</b>
           <div class="sort-box">
-            <span class="sort-how">По цене</span>
-            <span class="sort-how">По типу</span>
-            <span class="sort-how">По названию</span>
-            <span class="sort-how">По убыванию</span>
-            <span class="sort-how">По возрастанию</span>
+            <div class="sort-common">
+              <span class="sort-how">По цене</span>
+              <span class="sort-how">По типу</span>
+              <span class="sort-how">По названию</span>
+            </div>
+            <div class="sort-updown">
+              <span class="sort-how">По убыванию</span>
+              <span class="sort-how">По возрастанию</span>
+            </div>
           </div>
         </div>
         <div class="catalog"><!--только для карточек товаров-->
           <article class="catalog-item">
-            <img src="img/catalog-item-sedona.jpg" alt="Sedona" width="360" height="576">
+            <div class="catalog-item-img">
+              <img src="img/catalog-item-sedona.jpg" alt="Sedona" width="358" height="574">
+            </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Sedona</a>
               <p>Информационный сайт для туристов</p>
@@ -102,7 +110,9 @@
             </section>
           </article>
           <article class="catalog-item">
-            <img src="img/catalog-item-pink.jpg" alt="Pink" width="360" height="576">
+            <div class="catalog-item-img">
+              <img src="img/catalog-item-pink.jpg" alt="Pink" width="358" height="574">
+            </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Pink app</a>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
@@ -110,7 +120,9 @@
             </section>
           </article>
           <article class="catalog-item">
-            <img src="img/catalog-item-barbershop.jpg" alt="Barbershop" width="360" height="576">
+            <div class="catalog-item-img">
+              <img src="img/catalog-item-barbershop.jpg" alt="Barbershop" width="358" height="574">
+            </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Barbershop</a>
               <p>Сайт салона красоты. Для мужчин, да</p>
@@ -118,7 +130,9 @@
             </section>
           </article>
           <article class="catalog-item">
-            <img src="img/catalog-item-mishka.jpg" alt="Mishka" width="360" height="576">
+            <div class="catalog-item-img">
+              <img src="img/catalog-item-mishka.jpg" alt="Mishka" width="358" height="574">
+            </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Mishka</a>
               <p>Интернет-магазин вязаных игрушек</p>
@@ -126,7 +140,9 @@
             </section>
           </article>
           <article class="catalog-item">
-            <img src="img/catalog-item-aplus.jpg" alt="Aplus" width="360" height="576">
+            <div class="catalog-item-img">
+              <img src="img/catalog-item-aplus.jpg" alt="Aplus" width="358" height="574">
+            </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">A plus</a>
               <p>Лендинг курсов повышения квалификации</p>
@@ -134,7 +150,9 @@
             </section>
           </article>
           <article class="catalog-item">
-            <img src="img/catalog-item-kvast.jpg" alt="Kvast" width="360" height="576">
+            <div class="catalog-item-img">
+              <img src="img/catalog-item-kvast.jpg" alt="Kvast" width="358" height="574">
+            </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Кваст</a>
               <p>Промо-сайт производителя крафтового кваса</p>
@@ -159,13 +177,10 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-contacts-map">
-            <img src="img/footer-map-small.png" alt="map" width="1440" height="416">
-      </div>
-      <div class="container clearfix">
-        <div class="footer-contacts">
-          <!--Переставила карту-->
-          <section class="footer-contacts-nerds hide">
+      <div class="container-footer-top">
+        <div class="footer-map">
+          <img class = "footer-map-img" src="img/footer-map-small.png" alt="map" width="1160" height="416">
+          <section class="footer-map-nerds hide">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -175,6 +190,10 @@
             <p>тел. +7 (812) 275-75-75</p>
             <button>Напишите нам</button>
           </section>
+        </div>
+      </div>
+      <div class="container-footer-bottom clearfix">
+        <div class="footer-contacts">
           <form class="footer-write-us hide" action="#" method="post">
             <span>Напишите нам</span>
             <button class="write-us-close">X</button>
