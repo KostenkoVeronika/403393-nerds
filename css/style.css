@@ -1,23 +1,319 @@
+/*шрифты для тела - задание про фотошоп*/
 body {
   font-size: 16px;
   line-height: 24px;
   color: rgb(40,49,54);
   font-weight: 400;
-  font-family: roboto;
+  font-family: "roboto", "arial", sans-serif;
+  margin: 0; 
+  padding: 0; 
+  min-width: 1200px; 
+  background-color: rgb(255, 255, 255);
 }
 
+/*шрифты для заголовка слайдера в голове*/
 .slider-title {
   font-size: 55px;
   line-height: 55px;
   color: rgb(0,0,0);
   font-weight: 500;
-  font-family: roboto;
 }
 
+/*шрифты для преимуществ*/
 .advantages-title {
   font-size: 24px;
   line-height: 30px;
   color: rgb(0,0,0);
   font-weight: 700;
-  font-family: roboto;
+}
+
+/*цвет для заголовка. чтобы было видно*/
+.main-header {
+  background-color: blue;
+}
+
+/*для контейнеров*/
+.container {
+  background-color: bisque;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer-top,
+.footer-bottom {
+  background-color: darkseagreen;
+  padding-top: 0;
+}
+
+.main-header-top {
+  background-color: chocolate;
+}
+
+/*левый блок с фильтром - каталог*/
+.left-side {
+  background-color: darkgoldenrod;
+  width: 260px;
+  float: left;
+  min-height: 773px;
+  padding-top: 10px;
+}
+
+/*правый блок с товарами - каталог*/
+.right-side {
+  background-color: darkgray;
+  width: 760px;
+  float: right;
+  margin-bottom: 27px;
+}
+
+/*сортировка по переметрам - каталог*/
+.sort {
+  background-color: crimson;
+  margin-bottom: 42px;
+}
+
+/*надпись сортировать - каталог*/
+.sort-text {
+  background-color: aliceblue;
+  width: 200px;
+  float: left;
+  min-height: 40px;
+  margin: 0px; /*откуда отступ был?*/
+}
+
+/*коробка - параметры сортировки - каталог*/
+.sort-box {
+  background-color: aliceblue;
+  width: 500px;
+  float: right;
+  min-height: 40px;
+}
+
+.sort-updown {
+  display: inline-block;
+}
+
+.sort-common {
+  display: inline-block;
+}
+
+/*параметры сортировки - каталог*/
+.sort-how {
+  display: inline-block;
+}
+
+/*каталог - обнуляется шрифт, чтобы карточки не уходили ниже*/
+.catalog {
+  background-color: blueviolet;
+  font-size: 0px;
+}
+
+/*сами карточки - каталог*/
+.catalog-item {
+  background-color: crimson;
+  min-height: 616px;
+  width: 360px;
+  display: inline-block;
+  margin-bottom: 36px;
+  margin-right: 40px;
+  /*перед нижними двумя карточками отступы больше на несколько пикселей. Не 36, а где-то 40. Что с ними делать?*/
+}
+
+/*каталог - обнуление отступов у четных карточек*/
+.catalog-item:nth-child(2n) {
+  margin-right: 0px;
+}
+
+/*наезжающее на карточку поле временно спрятано*/
+.catalog-item-buy {
+  display: none;
+}
+
+/*блок с пагинацией - каталог*/
+.pagination {
+  background-color: cadetblue;
+  min-height: 100px;
+  margin: 0px; /*откуда берутся эти отступы???*/
+}
+
+/*сами страницы - каталог*/
+.pagination li {
+  display: inline-block;
+}
+
+
+
+/*настройки верхнего логотипа*/
+.logo-main {
+  background-color: aquamarine;
+  height: 65px;
+  width: 160px;
+  float: left;
+  margin-right: 100px;
+}
+
+/*главное меню наверху*/
+.main-navigation {
+  background-color: aquamarine;
+  min-height: 65px;
+  width: 640px;
+  float: left;
+ 
+}
+
+/*пункты верхнего меню*/
+.main-navigation li {
+  display: inline-block;
+}
+
+/*корзина*/
+.cart {
+  background-color: aquamarine;
+  min-height: 65px;
+  width: 160px;
+  float: right;
+}
+
+/*слайдер на главной странице*/
+.slider {
+  background-color: aqua;
+  min-height: 430px;
+  clear: both;
+}
+
+/*большой заголовок вместо слайдера для внутренней страницы*/
+.inside-title {
+  background-color: cyan;
+  min-height: 40px;
+  padding-top: 76px;
+  padding-bottom: 111px; 
+  clear: both;
+  margin-bottom: 0px; 
+  margin-top: 0;
+}
+
+/*добавлен временно для того, чтобы убрать элементы которых не видно*/
+.hide {
+  display: none;
+}
+
+/*блок преимуществ - главная*/
+.advantages {
+  background-color: aquamarine;
+  padding-bottom: 81px;
+  padding-top: 30px;
+  font-size: 0;
+  
+}
+
+/*преимущество - главная*/
+.advantages-item {
+  background-color: red;
+  width: 300px;
+  min-height: 347px;
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.advantages-item:nth-child(3n) {
+  margin-right: 60px;
+}
+
+
+/*блок студия - главная*/
+.studio {
+  background-color: aqua;
+  padding-top: 40px;
+  padding-bottom: 79px;
+}
+
+/*блок с текстом - главная*/
+.studio-about {
+  background-color: crimson;
+  width: 700px;
+  float: left;
+  min-height: 408px;
+}
+
+/*блок с картинкой и процентами - главная*/
+.studio-addition {
+  background-color: brown;
+  width: 360px;
+  float: right;
+  min-height: 408px;
+}
+
+/*блок партнеры - главная*/
+.studio-partners {
+  background-color: aquamarine;
+  margin-bottom: 81px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  font-size: 0;
+}
+
+/*отдельный партнер - главная*/
+.studio-partners li {
+  background-color: chartreuse;
+  display: inline-block;
+  min-height: 102px;
+  width: 260px;
+  margin-right: 40px;
+  vertical-align: middle;
+}
+
+.studio-partners li:nth-child(4n) {
+  margin-right: 0;
+}
+
+/*подвал цветом чтоб было видно*/
+.main-footer {
+  background-color: blue;
+}
+
+
+/*карта подвала*/
+.footer-map-image {
+  height: 416px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*блок с контактами который должен лежать на карте*/
+.footer-contacts {
+  background-color: aqua;
+  min-height: 214px;
+  width: 225px;
+  padding: 47px;
+  float: left;
+  /*временно спрятан, потому что не знаю как положить его сверху на карту*/
+}
+
+/*соцсети в подвале*/
+.footer-social-links {
+  background-color: coral;
+  float:left;
+  width: 260px;
+
+}
+
+/*текст в подвале*/
+.footer-social-text {
+  background-color: coral;
+  float: right;
+  width: 800px;
+  
+}
+
+/*чтоб не выпадало*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

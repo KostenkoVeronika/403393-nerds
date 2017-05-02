@@ -3,32 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="logo-main">
-          <img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"> 
-        </div>
-        <nav class="main-navigation">
-          <ul>
-            <li>
-              <a href="#">Студия</a>
-            </li>
-            <li>
-              <a href="#">Клиенты</a>
-            </li>
-            <li>
-              <a href="#">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="cart">
-          <a class="cart-link" href="#">Корзина</a>
+        <div class="main-header-top clearfix">
+          <div class="logo-main">
+            <img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"> 
+          </div>
+          <nav class="main-navigation">
+            <ul>
+              <li>
+                <a href="#">Студия</a>
+              </li>
+              <li>
+                <a href="#">Клиенты</a>
+              </li>
+              <li>
+                <a href="#">Магазин</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="cart">
+            <a class="cart-link" href="#">Корзина</a>
+          </div>
         </div>
         <div class="slider">
           <div class="slider-item">
@@ -36,17 +40,17 @@
             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
             <a href="#">Узнать больше</a>
           </div>
-          <div class="slider-item">
+          <div class="slider-item hide">
             <b class="slider-title">Любим математику как никто другой</b>
             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
             <a href="#">Узнать больше</a>
           </div>
-          <div class="slider-item">
+          <div class="slider-item hide">
             <b class="slider-title">Только ночь, только хардкор</b>
             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a href="#">Узнать больше</a>
           </div>
-          <div class="slider-indicator">
+          <div class="slider-indicator hide">
             <a href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
@@ -54,27 +58,27 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="container clearfix">
       <div class="advantages">
-        <article class="advantages-site">
+        <article class="advantages-item">
           <h2 class="advantages-title">Веб-сайты</h2>
           <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
           <a href="#">Заказать</a>
         </article>
-        <article class="advantages-app">
+        <article class="advantages-item">
           <h2 class="advantages-title">Приложения</h2>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
           <a href="#">Заказать</a>
         </article>
-        <article class="advantages-show">
+        <article class="advantages-item">
           <h2 class="advantages-title">Презентации</h2>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
           <a href="#">Заказать</a>
         </article>
       </div>
-      <div class="studio">
+      <div class="studio clearfix">
         <div class="studio-about">
-          <h3>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h3>
+          <b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
           <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
           <b>Выполняем заказы на разработку:</b>
           <ul class="studio-about-list">
@@ -99,29 +103,28 @@
             </tr>
           </table>
         </div>
-        <ul class="studio-partners">
-          <li>
-            <a class="studio-partners-item" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/partners-html-academy.png" alt="html academy" width="199" height="68"></a>
-          </li>
-          <li>
-            <a class="studio-partners-item" href="#"><img src="img/partners-barbershop.png" alt="barbershop" width="209" height="90"></a>
-          </li>
-          <li>
-            <a class="studio-partners-item" href="#"><img src="img/partners-pink.png" alt="pink" width="185" height="52"></a>
-          </li>
-          <li>
-            <a class="studio-partners-item" href="#"><img src="img/partners-mishka.png" alt="mishka" width="173" height="84"></a>
-          </li>
-        </ul>
-      </div>
+      </div>  
+      <ul class="studio-partners">
+        <li>
+          <a class="studio-partners-item" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/partners-html-academy.png" alt="html academy" width="199" height="68"></a>
+        </li>
+        <li>
+          <a class="studio-partners-item" href="#"><img src="img/partners-barbershop.png" alt="barbershop" width="209" height="90"></a>
+        </li>
+        <li>
+          <a class="studio-partners-item" href="#"><img src="img/partners-pink.png" alt="pink" width="185" height="52"></a>
+        </li>
+        <li>
+          <a class="studio-partners-item" href="#"><img src="img/partners-mishka.png" alt="mishka" width="173" height="84"></a>
+        </li>
+      </ul>
     </main>
     <footer class="main-footer">
-      <div class="container">
-        <div class="footer-contacts">
-          <div class="footer-contacts-map">
-           <img src="img/footer-map-small.png" alt="map" width="1440" height="416">
-          </div>
-          <section class="footer-contacts-nerds">
+      <div class="container footer-top">
+        <div class="footer-map">
+          <img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">
+        </div>
+        <section class="footer-contacts hide">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -130,20 +133,10 @@
             </p>
             <p>тел. +7 (812) 275-75-75</p>
             <button>Напишите нам</button>
-          </section>
-          <form class="footer-write-us" action="#" method="post">
-            <span>Напишите нам</span>
-            <button class="write-us-close">X</button>
-            <label for="name">Ваше имя:</label>
-            <input id="name" placeholder="Представьтесь, пожалуйста">
-            <label for="e-mail">Ваш e-mail:</label>
-            <input id="e-mail" placeholder="Для отправки ответа">
-            <label for="letter">Текст письма:</label>
-            <textarea id="letter" placeholder="В свободной форме"></textarea>
-            <input type="submit" value="Отправить">
-          </form>
-        </div>
-        <section class="footer-social">
+        </section>
+      </div>
+      <div class="container footer-bottom clearfix">
+        <section class="footer-social-links">
           <a class="footer-social-vk" href="#">vk</a>
           <a class="footer-social-fb" href="#">fb</a>
           <a class="footer-social-ig" href="#">ig</a>
@@ -152,6 +145,19 @@
           <b>Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
+      </div>
+      <div class="footer-form">
+        <form class="footer-write-us hide" action="#" method="post">
+          <span>Напишите нам</span>
+          <button class="write-us-close">X</button>
+          <label for="name">Ваше имя:</label>
+          <input id="name" placeholder="Представьтесь, пожалуйста">
+          <label for="e-mail">Ваш e-mail:</label>
+          <input id="e-mail" placeholder="Для отправки ответа">
+          <label for="letter">Текст письма:</label>
+          <textarea id="letter" placeholder="В свободной форме"></textarea>
+          <input type="submit" value="Отправить">
+        </form>
       </div>
     </footer>
   </body>
