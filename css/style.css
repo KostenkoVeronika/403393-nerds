@@ -8,8 +8,6 @@ body {
   margin: 0; 
   padding: 0; 
   min-width: 1200px; 
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgb(255, 255, 255);
 }
 
@@ -19,7 +17,6 @@ body {
   line-height: 55px;
   color: rgb(0,0,0);
   font-weight: 500;
-  font-family: "roboto", "arial", sans-serif;
 }
 
 /*шрифты для преимуществ*/
@@ -28,7 +25,6 @@ body {
   line-height: 30px;
   color: rgb(0,0,0);
   font-weight: 700;
-  font-family: "roboto", "arial", sans-serif;
 }
 
 /*цвет для заголовка. чтобы было видно*/
@@ -47,14 +43,14 @@ body {
   padding-right: 20px;
 }
 
-.container-footer-top,
-.container-footer-bottom {
+.footer-top,
+.footer-bottom {
   background-color: darkseagreen;
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 0;
+}
+
+.main-header-top {
+  background-color: chocolate;
 }
 
 /*левый блок с фильтром - каталог*/
@@ -194,11 +190,10 @@ body {
   background-color: cyan;
   min-height: 40px;
   padding-top: 76px;
-  padding-bottom: 111px;
-  padding-left: 220px;
-  padding-right: 200px;
+  padding-bottom: 111px; 
   clear: both;
-  margin-bottom: 0px; /*какой-то странный отступ. убрала.*/
+  margin-bottom: 0px; 
+  margin-top: 0;
 }
 
 /*добавлен временно для того, чтобы убрать элементы которых не видно*/
@@ -280,9 +275,10 @@ body {
 .main-footer {
   background-color: blue;
 }
-  
+
+
 /*карта подвала*/
-.footer-map-img {
+.footer-map-image {
   height: 416px;
   width: 100%;
   margin-left: auto;
@@ -290,7 +286,7 @@ body {
 }
 
 /*блок с контактами который должен лежать на карте*/
-.footer-contacts-nerds {
+.footer-contacts {
   background-color: aqua;
   min-height: 214px;
   width: 225px;
@@ -300,7 +296,7 @@ body {
 }
 
 /*соцсети в подвале*/
-.footer-social {
+.footer-social-links {
   background-color: coral;
   float:left;
   width: 260px;

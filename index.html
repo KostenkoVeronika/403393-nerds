@@ -10,27 +10,29 @@
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="logo-main">
-          <img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"> 
-        </div>
-        <nav class="main-navigation">
-          <ul>
-            <li>
-              <a href="#">Студия</a>
-            </li>
-            <li>
-              <a href="#">Клиенты</a>
-            </li>
-            <li>
-              <a href="#">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="cart">
-          <a class="cart-link" href="#">Корзина</a>
+        <div class="main-header-top clearfix">
+          <div class="logo-main">
+            <img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"> 
+          </div>
+          <nav class="main-navigation">
+            <ul>
+              <li>
+                <a href="#">Студия</a>
+              </li>
+              <li>
+                <a href="#">Клиенты</a>
+              </li>
+              <li>
+                <a href="#">Магазин</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="cart">
+            <a class="cart-link" href="#">Корзина</a>
+          </div>
         </div>
         <div class="slider">
           <div class="slider-item">
@@ -118,10 +120,11 @@
       </ul>
     </main>
     <footer class="main-footer">
-      <div class="container-footer-top"
+      <div class="container footer-top">
         <div class="footer-map">
-          <img class = "footer-map-img" src="img/footer-map-small.png" alt="map" width="1160" height="416">
-          <section class="footer-map-nerds hide">
+          <img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">
+        </div>
+        <section class="footer-contacts hide">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -130,24 +133,10 @@
             </p>
             <p>тел. +7 (812) 275-75-75</p>
             <button>Напишите нам</button>
-          </section>
-        </div>
+        </section>
       </div>
-      <div class="container-footer-bottom clearfix">
-        <div class="footer-contacts">
-          <form class="footer-write-us hide" action="#" method="post">
-            <span>Напишите нам</span>
-            <button class="write-us-close">X</button>
-            <label for="name">Ваше имя:</label>
-            <input id="name" placeholder="Представьтесь, пожалуйста">
-            <label for="e-mail">Ваш e-mail:</label>
-            <input id="e-mail" placeholder="Для отправки ответа">
-            <label for="letter">Текст письма:</label>
-            <textarea id="letter" placeholder="В свободной форме"></textarea>
-            <input type="submit" value="Отправить">
-          </form>
-        </div>
-        <section class="footer-social">
+      <div class="container footer-bottom clearfix">
+        <section class="footer-social-links">
           <a class="footer-social-vk" href="#">vk</a>
           <a class="footer-social-fb" href="#">fb</a>
           <a class="footer-social-ig" href="#">ig</a>
@@ -156,6 +145,19 @@
           <b>Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
+      </div>
+      <div class="footer-form">
+        <form class="footer-write-us hide" action="#" method="post">
+          <span>Напишите нам</span>
+          <button class="write-us-close">X</button>
+          <label for="name">Ваше имя:</label>
+          <input id="name" placeholder="Представьтесь, пожалуйста">
+          <label for="e-mail">Ваш e-mail:</label>
+          <input id="e-mail" placeholder="Для отправки ответа">
+          <label for="letter">Текст письма:</label>
+          <textarea id="letter" placeholder="В свободной форме"></textarea>
+          <input type="submit" value="Отправить">
+        </form>
       </div>
     </footer>
   </body>
