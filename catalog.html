@@ -9,9 +9,9 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container header-container">
         <div class="main-header-top clearfix">
-          <div class="logo-main">
+          <div class="logo-main inner">
             <a href="index.html"><img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"></a> 
           </div>
           <nav class="main-navigation">
@@ -22,8 +22,8 @@
               <li>
                 <a href="#">Клиенты</a>
               </li>
-              <li>
-                <a href="#">Магазин</a>
+              <li class="current">
+                <a>Магазин</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -42,47 +42,65 @@
         <form class="filter" action="#" method="get">
           <fieldset>
             <legend class="filter-title">Стоимость:</legend>
-            <input type="range">
+            <div class="filter-range-controls">
+              <div class="filter-range-scale">
+                <div class="filter-range-bar" style="margin-left: 0; width: 70%" ></div>
+              </div>
+              <div class="range-toggle toggle-min"></div>
+              <div class="range-toggle toggle-max"></div>
+            </div>
+            <div class="filter-price-controls">
+              <label class="price-controls-min">от <input class="min-price" name="min-price" type="text" value="0"></label>
+              <label class="price-controls-max">до <input class="max-price" name="max-price" type="text" value="15000"></label>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-radio">
             <legend class="filter-title">Сетка:</legend>
-            <label class="filter-item">
-              <input type="radio" name="grid" value="adaptive" checked>
+            <label class="filter-item radio">
+              <input class="radiobtn" type="radio" name="grid" value="adaptive" checked>
+              <span class="radio-indicator"></span>
               Адаптивная
             </label>
-            <label class="filter-item">
-              <input type="radio" name="grid" value="fixated">
+            <label class="filter-item radio">
+              <input class="radiobtn" type="radio" name="grid" value="fixated" disabled>
+              <span class="radio-indicator"></span>
               Фиксированная
             </label>
-            <label class="filter-item">
-              <input type="radio" name="grid" value="rubber">
+            <label class="filter-item radio">
+              <input class="radiobtn" type="radio" name="grid" value="rubber">
+              <span class="radio-indicator"></span>
               Резиновая
             </label>
           </fieldset>
-          <fieldset>
+          <fieldset class="features">
             <legend class="filter-title">Особенности:</legend>
             <label class="filter-item">
               <input type="checkbox" checked>
+              <span class="checkbox-indicator"></span>
               Слайдер
             </label>
             <label class="filter-item">
-              <input type="checkbox">
+              <input type="checkbox" disabled>
+              <span class="checkbox-indicator"></span>
               Блок преимуществ
             </label>
             <label class="filter-item">
               <input type="checkbox" checked>
+              <span class="checkbox-indicator"></span>
               Новости
             </label>
             <label class="filter-item">
               <input type="checkbox">
+              <span class="checkbox-indicator"></span>
               Галерея
             </label>
             <label class="filter-item">
               <input type="checkbox">
+              <span class="checkbox-indicator"></span>
               Корзина
             </label>
           </fieldset>
-          <input type="submit" value="Показать">
+          <input class="filter-result" type="submit" value="Показать">
         </form>
       </div>
       <div class="right-side">
@@ -90,12 +108,12 @@
           <b class="sort-text">Сортировать:</b>
           <div class="sort-box">
             <div class="sort-common">
-              <span class="sort-how">По цене</span>
+              <span class="sort-how sort-current">По цене</span>
               <span class="sort-how">По типу</span>
               <span class="sort-how">По названию</span>
             </div>
             <div class="sort-updown">
-              <span class="sort-how">По убыванию</span>
+              <span class="sort-how sort-current">По убыванию</span>
               <span class="sort-how">По возрастанию</span>
             </div>
           </div>
@@ -107,8 +125,8 @@
             </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Sedona</a>
-              <p>Информационный сайт для туристов</p>
-              <a class="catalog-buy-do" href="#">9900 руб.</a>
+              <p>Информационный сайт <br> для туристов</p>
+              <a class="catalog-buy-do" href="#">9 900 руб.</a>
             </section>
           </article>
           <article class="catalog-item">
@@ -117,8 +135,8 @@
             </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Pink app</a>
-              <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="catalog-buy-do" href="#">9900 руб.</a>
+              <p>Продуктовый лендинг <br> приложения для iOS и Android</p>
+              <a class="catalog-buy-do" href="#">9 900 руб.</a>
             </section>
           </article>
           <article class="catalog-item">
@@ -127,8 +145,8 @@
             </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Barbershop</a>
-              <p>Сайт салона красоты. Для мужчин, да</p>
-              <a class="catalog-buy-do" href="#">9900 руб.</a>
+              <p>Сайт салона красоты. <br> Для мужчин, да</p>
+              <a class="catalog-buy-do" href="#">9 900 руб.</a>
             </section>
           </article>
           <article class="catalog-item">
@@ -137,8 +155,8 @@
             </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Mishka</a>
-              <p>Интернет-магазин вязаных игрушек</p>
-              <a class="catalog-buy-do" href="#">9900 руб.</a>
+              <p>Интернет-магазин <br> вязаных игрушек</p>
+              <a class="catalog-buy-do" href="#">9 900 руб.</a>
             </section>
           </article>
           <article class="catalog-item">
@@ -147,8 +165,8 @@
             </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">A plus</a>
-              <p>Лендинг курсов повышения квалификации</p>
-              <a class="catalog-buy-do" href="#">9900 руб.</a>
+              <p>Лендинг курсов повышения <br> квалификации</p>
+              <a class="catalog-buy-do" href="#">9 900 руб.</a>
             </section>
           </article>
           <article class="catalog-item">
@@ -157,13 +175,13 @@
             </div>
             <section class="catalog-item-buy">
               <a class="catalog-buy-info" href="#">Кваст</a>
-              <p>Промо-сайт производителя крафтового кваса</p>
-              <a class="catalog-buy-do" href="#">9900 руб.</a>
+              <p>Промо-сайт производителя <br> крафтового кваса</p>
+              <a class="catalog-buy-do" href="#">9 900 руб.</a>
             </section>
           </article>
         </div>
         <ul class="pagination">
-          <li class="pagination-item active">
+          <li class="pagination-item pagination-current">
             <a>1</a>
           </li>
           <li class="pagination-item">
@@ -183,7 +201,7 @@
         <div class="footer-map">
           <img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">
         </div>
-        <section class="footer-contacts hide">
+        <section class="footer-contacts">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -196,26 +214,34 @@
       </div>
       <div class="container footer-bottom clearfix">
         <section class="footer-social-links">
-          <a class="footer-social-vk" href="#">vk</a>
-          <a class="footer-social-fb" href="#">fb</a>
-          <a class="footer-social-ig" href="#">ig</a>
+          <a class="footer-social-item vk" href="#">vk</a>
+          <a class="footer-social-item fb" href="#">fb</a>
+          <a class="footer-social-item ig" href="#">ig</a>
         </section>
         <div class="footer-social-text">
           <b>Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-      <div class="footer-form">
-        <form class="footer-write-us hide" action="#" method="post">
+      <div class="footer-form-modal">
+        <form class="footer-write-us" action="#" method="post">
           <span>Напишите нам</span>
           <button class="write-us-close">X</button>
-          <label for="name">Ваше имя:</label>
-          <input id="name" placeholder="Представьтесь, пожалуйста">
-          <label for="e-mail">Ваш e-mail:</label>
-          <input id="e-mail" placeholder="Для отправки ответа">
-          <label for="letter">Текст письма:</label>
-          <textarea id="letter" placeholder="В свободной форме"></textarea>
-          <input type="submit" value="Отправить">
+          <div class="clearfix">
+            <div class="form-name">
+              <label for="name">Ваше имя:</label>
+              <input class="form-value" id="name"  placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="form-email">
+              <label for="e-mail">Ваш e-mail:</label>
+              <input class="form-value" id="e-mail" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <div class="form-letter">
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" placeholder="В свободной форме"></textarea>
+          </div>
+          <input class="form-button" type="submit" value="Отправить">
         </form>
       </div>
     </footer>
