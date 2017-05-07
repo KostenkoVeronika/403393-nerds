@@ -22,8 +22,8 @@
               <li>
                 <a href="#">Клиенты</a>
               </li>
-              <li class="current">
-                <a>Магазин</a>
+              <li>
+                <a class="current">Магазин</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -40,7 +40,7 @@
     <main class="container clearfix">
       <div class="left-side">
         <form class="filter" action="#" method="get">
-          <fieldset>
+          <fieldset class="range">
             <legend class="filter-title">Стоимость:</legend>
             <div class="filter-range-controls">
               <div class="filter-range-scale">
@@ -56,49 +56,35 @@
           </fieldset>
           <fieldset class="filter-radio">
             <legend class="filter-title">Сетка:</legend>
-            <label class="filter-item radio">
-              <input class="radiobtn" type="radio" name="grid" value="adaptive" checked>
-              <span class="radio-indicator"></span>
-              Адаптивная
-            </label>
-            <label class="filter-item radio">
-              <input class="radiobtn" type="radio" name="grid" value="fixated" disabled>
-              <span class="radio-indicator"></span>
-              Фиксированная
-            </label>
-            <label class="filter-item radio">
-              <input class="radiobtn" type="radio" name="grid" value="rubber">
-              <span class="radio-indicator"></span>
-              Резиновая
-            </label>
+            <input class="radio-grid adaptive" type="radio" name="grid" id="radio-grid1" value="adaptive" checked>
+            <label class="for-radio-grid adaptive" for="radio-grid1">Адаптивная</label>
+            <input class="radio-grid fixated" type="radio" name="grid" id="radio-grid2" value="fixated" disabled>
+            <label class="for-radio-grid fixated" for="radio-grid2">Фиксированная</label>
+            <input class="radio-grid rubber" type="radio" name="grid" id="radio-grid3" value="rubber">
+            <label class="for-radio-grid rubber" for="radio-grid3">Резиновая</label>
           </fieldset>
           <fieldset class="features">
             <legend class="filter-title">Особенности:</legend>
-            <label class="filter-item">
-              <input type="checkbox" checked>
-              <span class="checkbox-indicator"></span>
-              Слайдер
-            </label>
-            <label class="filter-item">
-              <input type="checkbox" disabled>
-              <span class="checkbox-indicator"></span>
-              Блок преимуществ
-            </label>
-            <label class="filter-item">
-              <input type="checkbox" checked>
-              <span class="checkbox-indicator"></span>
-              Новости
-            </label>
-            <label class="filter-item">
-              <input type="checkbox">
-              <span class="checkbox-indicator"></span>
-              Галерея
-            </label>
-            <label class="filter-item">
-              <input type="checkbox">
-              <span class="checkbox-indicator"></span>
-              Корзина
-            </label>
+            <div>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features" checked>
+              <label class="for-checkbox-features" for="checkbox-features" >Слайдер</label>
+            </div>
+            <div>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features" disabled>
+              <label class="for-checkbox-features" for="checkbox-features">Блок преимуществ</label>
+            </div>
+            <div>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features" checked>
+              <label class="for-checkbox-features" for="checkbox-features">Новости</label>
+            </div>
+            <div>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features">
+              <label class="for-checkbox-features" for="checkbox-features">Галерея</label>
+            </div>
+            <div>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features">
+              <label class="for-checkbox-features" for="checkbox-features">Корзина</label>
+            </div>
           </fieldset>
           <input class="filter-result" type="submit" value="Показать">
         </form>
@@ -244,6 +230,7 @@
           <input class="form-button" type="submit" value="Отправить">
         </form>
       </div>
+      <div class="footer-modal-overlay"></div>
     </footer>
   </body>
 </html>

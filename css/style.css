@@ -1,4 +1,3 @@
-/*шрифты для тела - задание про фотошоп*/
 body {
   font-size: 16px;
   line-height: 24px;
@@ -11,13 +10,10 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-
-/*цвет для заголовка. чтобы было видно*/
 .main-header {
   background-color: rgb(238, 238, 238);
 }
 
-/*для контейнеров*/
 .container {
   background-color: rgb(255, 255, 255);
   width: 1160px;
@@ -30,7 +26,6 @@ body {
 
 .header-container {
   background-color: rgb(238, 238, 238);
-
 }
 
 .footer-top,
@@ -39,8 +34,10 @@ body {
   padding-top: 0;
 }
 
+.footer-bottom {
+  margin-bottom: 50px;
+}
 
-/*левый блок с фильтром - каталог*/
 .left-side {
   width: 260px;
   float: left;
@@ -55,7 +52,7 @@ body {
   border: 0;
   width: 260px;
   padding: 0;
-  margin-bottom: 55px;
+  margin-bottom: 52px;
 }
 
 .filter-range-controls {
@@ -107,14 +104,18 @@ body {
 
 .filter-price-controls label {
   display: inline-block;
+  vertical-align: bottom;
   width: 50%;
   font-size: 16px;
   text-transform: uppercase;
+  line-height: 22px;
 }
 
 .filter-price-controls input {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
   text-align: center;
   color: rgb(40, 49, 54);
   width: 80px;
@@ -136,24 +137,27 @@ body {
   line-height: 30px;
   margin: 0px 0 48px 0;
   display: inline-block;
+  vertical-align: bottom;
   padding: 0px 0 0 0;
+  color: rgb(0, 0, 0);
 }
 
 .filter-radio .filter-title {
-  margin-bottom: 0;
+  margin-bottom: 1px;
 }
 
-.filter-radio input {
+.filter-radio .radio-grid {
   display: none;
 }
 
-.filter-radio label {
-  margin: 14px 0px 16px 36px;
+.filter-radio .for-radio-grid {
+  margin: 14px 0px 20px 36px;
   display: block;
   position: relative;
+  line-height: 20px;
 }
 
-.radiobtn + .radio-indicator::after {
+.for-radio-grid::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -167,33 +171,40 @@ body {
   cursor: pointer;
 }
 
-.radio-indicator:hover::after {
+.for-radio-grid:hover::before {
   opacity: 1;
 }
 
-.radiobtn:disabled ~ .radio-indicator::after {
+/*С ОБЁРТКОЙ ИЛИ СПИСКОМ НЕ РАБОТАЕТ!!!!!*/
+.radio-grid.adaptive:disabled ~ .for-radio-grid.adaptive::before,
+.radio-grid.fixated:disabled ~ .for-radio-grid.fixated::before,
+.radio-grid.rubber:disabled ~ .for-radio-grid.rubber::before {
   opacity: 0.1;
+  cursor: default;
 }
 
-.radiobtn:checked ~ .radio-indicator::after {
+.radio-grid.adaptive:checked ~ .for-radio-grid.adaptive::before,
+.radio-grid.fixated:checked ~ .for-radio-grid.fixated::before,
+.radio-grid.rubber:checked ~ .for-radio-grid.rubber::before {
   background-color: rgb(77, 77, 77);
   box-shadow: 
     inset 0 0 0 4px rgb(77, 77, 77),
     inset 0 0 0 8px rgb(255, 255, 255);
 }
 
-.filter fieldset:nth-child(3) {
+.filter .features {
   margin-bottom: 0;
-  margin-top: -28px;
+  margin-top: -25px;
 }
 
-.features label {
-  margin: 14px 0px 16px 36px;
+.features .for-checkbox-features {
+  margin: 14px 0px 20px 36px;
   display: block;
   position: relative;
+  line-height: 20px;
 }
 
-.features input {
+.features .checkbox-features {
   display: none;
 }
 
@@ -201,33 +212,35 @@ body {
   margin-bottom: 0;
 }
 
-.checkbox-indicator::after {
+.for-checkbox-features::before {
   content: "";
   position: absolute;
   top: 0;
   left: -35px;
   width: 22px;
   height: 22px;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: inset 0 0 0 2px rgb(77, 77, 77);
   background-color: rgb(255, 255, 255);
   opacity: 0.4;
   cursor: pointer;
+  margin-top: -1px;
 }
 
-.checkbox-indicator:hover::after {
+.for-checkbox-features:hover::before {
   opacity: 1;
 }
 
-.features input:disabled ~.checkbox-indicator::after {
+.checkbox-features:disabled ~ .for-checkbox-features::before {
   opacity: 0.1;
 }
 
-.features input:checked ~.checkbox-indicator::after {
-  width: 23px;
+/*ВОТ ТАК ВОТ ОНО НЕ ПОЛУЧАЕТСЯ!!!!!*/
+.checkbox-features:checked ~ .for-checkbox-features::before {
+  width: 27px;
   height: 23px;
   box-shadow: none;
-  background-image: url(../img/spritesheet.png);
+  background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
   background-position: -63px -5px;
   top: 0;
@@ -235,10 +248,11 @@ body {
 }
 
 .filter-result {
-  margin: 32px 0 0 2px;
+  margin: 31px 0 0 2px;
   font-size: 16px;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
+  line-height: 18px;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
   display: block;
@@ -247,6 +261,7 @@ body {
   background-color: rgb(238, 238, 238);
   border-radius: 3px;
   padding: 15px 0 14px 0;
+  outline: none;
 }
 
 .filter-result:hover {
@@ -257,34 +272,30 @@ body {
   color: rgba(0, 0, 0, 0.3);
   background-color: rgb(213, 213, 213);
   box-shadow: inset 0 3px 0 0 rgb(191, 191, 191);
-  
 }
 
-/*правый блок с товарами - каталог*/
 .right-side {
   width: 760px;
   float: right;
   margin-bottom: 27px;
 }
 
-/*сортировка по переметрам - каталог*/
 .sort {
   margin-bottom: 42px;
 }
 
-/*надпись сортировать - каталог*/
 .sort-text {
   width: 200px;
   float: left;
-  margin: 0px; /*откуда отступ был?*/
+  margin: 0px; 
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
   padding-top: 6px;
+  color: rgb(0, 0, 0);
 }
 
-/*коробка - параметры сортировки - каталог*/
 .sort-box {
   width: 500px;
   float: right;
@@ -324,16 +335,17 @@ body {
   background-position: -189px -5px;
 }
 
-.sort-updown .sort-how:hover {
+.sort-updown .sort-how:not(.sort-current):hover {
   opacity: 0.4;
 }
 
-.sort-updown .sort-how:active {
+.sort-updown .sort-how:not(.sort-current):active {
   opacity: 1;
 }
 
 .sort-updown .sort-current::before {
   opacity: 1;
+  cursor: default;
 }
 
 .sort-common {
@@ -343,51 +355,56 @@ body {
   margin-left: 120px;
 }
 
-/*параметры сортировки - каталог*/
 .sort-common .sort-how {
   display: inline-block;
+  vertical-align: middle;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   margin-left: 21px;
   opacity: 0.3;
   cursor: pointer;
+  color: rgb(0, 0, 0);
 }
 
-.sort-common .sort-how:hover {
+.sort-common .sort-how:not(.sort-current):hover {
   opacity: 0.6;
 }
 
-.sort-common .sort-how:active {
+.sort-common .sort-how:not(.sort-current):active {
   opacity: 1;
 }
 
 .sort-common .sort-current {
   opacity: 1;
+  cursor: default;
 }
 
-/*каталог - обнуляется шрифт, чтобы карточки не уходили ниже*/
 .catalog {
   font-size: 0px;
 }
 
-/*сами карточки - каталог*/
 .catalog-item {
   width: 358px;
   display: inline-block;
+  vertical-align: bottom;
   margin: 0 41px 38px 1px;
   background-color: rgba(77, 77, 77, 0.12);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   position: relative;
+  /*ТОЧЕЧКИ ФОНОМ ВЫГЛЯДЯТ СТРАННО*/
+  /*background-image: url("../img/dots.png");
+  background-repeat: no-repeat;
+  background-position: 12px 10px;*/
 }
 
-/*каталог - обнуление отступов у четных карточек*/
 .catalog-item:nth-child(2n) {
   margin-right: 0px;
 }
 
-.catalog-item::before {
+/*ТОЧЕЧКИ КАК БЫЛО*/
+/*.catalog-item::before {
   content: "";
   position: absolute;
   height: 14px;
@@ -396,15 +413,11 @@ body {
   border-radius: 50%;
   top: 12px;
   left: 61px;
-}
+}*/
 
 .catalog-item:hover {
   background-color: rgba(77, 77, 77, 1);
   box-shadow: 0 10px 15px 0 rgba(77, 77, 77, 0.3);
-}
-
-.catalog-item:hover ~ .catalog-item-buy {
-  display: block;
 }
 
 .catalog-item-img {
@@ -414,7 +427,8 @@ body {
   position: relative;
 }
 
-.catalog-item-img::before,
+/*ТОЧЕЧКИ КАК БЫЛО*/
+/*.catalog-item-img::before,
 .catalog-item-img::after {
   content: "";
   position: absolute;
@@ -432,9 +446,8 @@ body {
 .catalog-item-img::after {
   top: -28px;
   left: 38px;
-}
+}*/
 
-/*наезжающее на карточку поле временно спрятано*/
 .catalog-item-buy {
   display: none;
   font-size: 16px;
@@ -445,7 +458,10 @@ body {
   height: 232px;
   color: rgb(102, 102, 102);
   background-color: rgb(238, 238, 238);
+}
 
+.catalog-item:hover > .catalog-item-buy {
+  display: block;
 }
 
 .catalog-buy-info {
@@ -463,6 +479,7 @@ body {
 .catalog-item-buy p {
   text-align: center;
   margin-left: 4px;
+  color: rgb(102, 102, 102);
 }
 
 .catalog-buy-do {
@@ -487,13 +504,11 @@ body {
   background-color: rgb(215, 55, 59);
 }
 
-/*блок с пагинацией - каталог*/
 .pagination {
   margin: 17px 0 33px 0;
   padding: 0; 
 }
 
-/*сами страницы - каталог*/
 .pagination-item {
   display: inline-block;
   width: 50px;
@@ -510,8 +525,9 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
-  padding: 18px 0 14px 0;
+  padding: 17px 0 15px 0;
   background-color: rgb(238, 238, 238);
+  border-radius: 3px;
 }
 
 .pagination-item:last-child a {
@@ -520,8 +536,8 @@ body {
 
 .pagination-current a {
   background-color: rgb(255, 255, 255);
-  box-shadow: inset 0 0 0 2px rgb(219, 219, 219);
-  border-radius: 3px;
+  box-shadow: inset 0 0 0 3px rgb(219, 219, 219);
+  cursor: default;
 }
 
 .pagination-item:not(.pagination-current) a:hover {
@@ -534,8 +550,6 @@ body {
   box-shadow: inset 0 3px 0 0 rgba(191, 191, 191, 1);
 }
 
-
-/*настройки верхнего логотипа*/
 .logo-main {
   height: 65px;
   width: 160px;
@@ -551,12 +565,10 @@ body {
   opacity: 0.3;
 }
 
-/*главное меню наверху*/
 .main-navigation {
   min-width: 640px;
   max-width: 740px;
   float: left;
- 
 }
 
 .main-navigation ul {
@@ -567,7 +579,6 @@ body {
   margin-left: 91px;
 }
 
-/*пункты верхнего меню*/
 .main-navigation li {
   display: inline-block;
   vertical-align: bottom;
@@ -584,20 +595,22 @@ body {
   padding: 26px 37px 10px 10px;
 }
 
-.main-navigation a:hover {
+.main-navigation a:not(.current):hover {
   color: rgb(251, 86, 90);
 }
 
-.main-navigation a:active {
-  color: rgb(0, 0, 0);
-  opacity: 0.3;
+.main-navigation a:not(.current):active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.main-navigation .current {
+.main-navigation .current,
+.cart .current {
   position: relative;
+  cursor: default;
 }
 
-.main-navigation .current::after {
+.main-navigation .current::after,
+.cart .current::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -607,7 +620,11 @@ body {
   bottom: 5px;
 }
 
-/*корзина*/
+.cart .current::after {
+  right: 0;
+  left: 47px;
+}
+
 .cart {
   width: 160px;
   float: right;
@@ -623,14 +640,13 @@ body {
   color: rgb(0, 0, 0);
   display: block;
   padding: 26px 0px 10px 86px;
-  
 }
 
-.cart a:hover {
+.cart a:not(.current):hover {
   color: rgb(251, 86, 90);
 }
 
-.cart a:active {
+.cart a:not(.current):active {
   color: rgb(0, 0, 0);
   opacity: 0.3;
 }
@@ -647,7 +663,6 @@ body {
   background-position: -5px -5px;
 }
 
-/*слайдер на главной странице*/
 .slider {
   position: relative;
   height: 430px;
@@ -656,7 +671,7 @@ body {
 
 .slider-item {
   position: absolute;
-  overflow: hidden;
+  overflow: auto;
   top: 0;
   left: 0;
   width: 100%;
@@ -691,6 +706,7 @@ body {
   text-decoration: none;
   background-color: rgb(251, 86, 90);
   border-radius: 3px;
+  font-weight: 500;
 }
 
 .slider-item a:hover {
@@ -721,9 +737,9 @@ body {
   background-position: 401px 18px;
 }
 
-.slider-indicator .indicator-1,
-.slider-indicator .indicator-2,
-.slider-indicator .indicator-3 {
+.indicator-1,
+.indicator-2,
+.indicator-3 {
   position: absolute;
   opacity: 0;
 }
@@ -753,10 +769,9 @@ body {
   cursor: pointer;
 }
 
-
-.indicator-1:checked ~ .for-indicator-1,
-.indicator-2:checked ~ .for-indicator-2,
-.indicator-3:checked ~ .for-indicator-3 {
+.indicator-1:checked ~ .slider-indicator .for-indicator-1,
+.indicator-2:checked ~ .slider-indicator .for-indicator-2,
+.indicator-3:checked ~ .slider-indicator .for-indicator-3 {
   box-shadow:
     inset 0 0 0 5px rgb(255, 255, 255),
     inset 0 0 0 7px rgb(193, 193, 193);
@@ -766,11 +781,7 @@ body {
   display: none;
 }
 
-.slider-item:nth-child(1) {
-  display: block;
-}
-
-/*.indicator-1:checked ~ .slider-content .slider-item:nth-child(1) {
+.indicator-1:checked ~ .slider-content .slider-item:nth-child(1) {
   display: block;
 }
 
@@ -780,9 +791,8 @@ body {
 
 .indicator-3:checked ~ .slider-content .slider-item:nth-child(3) {
   display: block;
-}*/
+}
 
-/*большой заголовок вместо слайдера для внутренней страницы*/
 .inside-title {
   display: block;
   width: 1160px;
@@ -792,25 +802,23 @@ body {
   text-align: center;
 }
 
-/*добавлен временно для того, чтобы убрать элементы которых не видно*/
 .hide {
   display: none;
 }
 
-/*блок преимуществ - главная*/
 .advantages {
   padding-bottom: 81px;
   padding-top: 30px;
   font-size: 0;
-  
 }
 
-/*преимущество - главная*/
 .advantages-item {
   width: 300px;
   min-height: 347px;
   display: inline-block;
+  vertical-align: bottom;
   margin-right: 100px;
+  padding-top: 2px;
 }
 
 .advantages-title {
@@ -819,15 +827,17 @@ body {
   color: rgb(0,0,0);
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 172px;
+  margin-top: 13px;
   margin-bottom: 16px;
 }
 
 .advantages-item p {
-  font-size: 16px;
-  color: rgb(40,49,54);
   width: 260px;
   margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgb(40, 49, 54);
 }
 
 .advantages-item a {
@@ -842,6 +852,8 @@ body {
   text-align: center;
   margin-top: 32px;
   border-radius: 3px;
+  background-color: rgb(238, 238, 238);
+  font-weight: 500;
 }
 
 .advantages-item:nth-child(1) a {
@@ -886,37 +898,34 @@ body {
   box-shadow: inset 0 3px 0 0 rgb(206, 150, 31);
 }
 
-.advantages-item:nth-child(1) {
+/*.advantages-item:nth-child(3n-2) {
   background-image: url("../img/advantages-site1.png");
   background-repeat: no-repeat;
   background-position: 0 1px;
 }
 
-.advantages-item:nth-child(2) {
+.advantages-item:nth-child(3n-1) {
   background-image: url("../img/advantages-site2.png");
   background-repeat: no-repeat;
   background-position: 0 1px;
 }
 
-.advantages-item:nth-child(3) {
+.advantages-item:nth-child(3n) {
   background-image: url("../img/advantages-site3.png");
   background-repeat: no-repeat;
   background-position: 0 1px;
-}
+}*/
 
 .advantages-item:nth-child(3n) {
   margin-right: 60px;
 }
 
-
-/*блок студия - главная*/
 .studio {
   padding-top: 40px;
   padding-bottom: 50px;
   border-bottom: 2px solid rgb(238, 238, 238);
 }
 
-/*блок с текстом - главная*/
 .studio-about {
   width: 660px;
   float: left;
@@ -927,7 +936,8 @@ body {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-  margin: 35px 0 33px 0;
+  margin: 33px 0 33px 0;
+  color: rgb(0, 0, 0);
 }
 
 .studio-about p {
@@ -936,15 +946,16 @@ body {
 
 .studio-about-orders {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 36px 0 0 0;
+  margin: 39px 0 0 0;
   display: block;
+  color: rgb(0, 0, 0);
 }
 
 .studio-about-list {
-  margin-top: 21px;
+  margin-top: 24px;
   padding: 0;
   list-style: none;
 }
@@ -965,7 +976,6 @@ body {
   position: absolute;
 }
 
-/*блок с картинкой и процентами - главная*/
 .studio-addition {
   width: 360px;
   float: right;
@@ -975,23 +985,30 @@ body {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 500;
-  margin: 30px 0 51px 0;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin: 28px 0 51px 4px;
 }
 
-.studio-percent,
-.studio-meaning {
+.studio-table {
+  padding: 0;
+}
+
+.studio-table li {
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin-bottom: 19px;
+  margin: 0px 7px 0 0px;
+  display: inline-block;
+  vertical-align: bottom;
 } 
 
-.studio-percent li {
+.studio-percent {
   font-size: 45px;
   font-weight: 700;
-  display: inline-block;
-  margin-right: 18px;
+  line-height: 10.06px;
+  color: rgb(0, 0, 0);
+  padding: 0;
+  margin: 6px 0 0 0;
 }
 
 .studio-percent sup {
@@ -999,14 +1016,13 @@ body {
   font-size: 60%;
 }
 
-.studio-meaning li {
-  display: inline-block;
+.studio-meaning {
+  padding: 0;
   width: 110px;
   line-height: 18px;
-  margin-right: 5px;
+  margin: 38px 0 0 0;
 }
 
-/*блок партнеры - главная*/
 .studio-partners {
   margin: 0;
   padding-left: 0;
@@ -1016,7 +1032,6 @@ body {
   border-bottom: 2px solid rgb(238, 238, 238);
 }
 
-/*отдельный партнер - главная*/
 .studio-partners li {
   display: inline-block;
   margin-right: 40px;
@@ -1058,7 +1073,6 @@ body {
   opacity: 0.1;
 }
 
-/*подвал цветом чтоб было видно*/
 .main-footer {
   background-color: rgb(255, 255, 255);
 }
@@ -1067,7 +1081,6 @@ body {
   position: relative;
 }
 
-/*карта подвала*/
 .footer-map-image {
   height: 416px;
   width: 100%;
@@ -1075,15 +1088,15 @@ body {
   margin-right: auto;
 }
 
-/*блок с контактами который должен лежать на карте*/
 .footer-contacts {
   background-color: rgb(255, 255, 255);
-  width: 319px;
+  width: 269px;
   float: left;
   position: absolute;
   z-index: 20;
   top: 54px;
   left: 20px;
+  padding-left: 50px;
 }
 
 .footer-contacts h4 {
@@ -1091,20 +1104,22 @@ body {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 49px 0 23px 50px;
+  margin: 49px 0 23px 0;
   display: block;
+  color: rgb(0, 0, 0);
 }
 
 .footer-contacts p {
-    margin: 0 0 19px 51px;
-    line-height: 18px;
+  margin: 0 0 19px 1px;
+  line-height: 18px;
+  color: rgb(102, 102, 102);
 }
 
 .footer-contacts button {
   display: block;
   text-align: center;
   width: 220px;
-  margin: 36px 0 47px 50px;
+  margin: 36px 0 47px 0;
   height: 50px;
   font-size: 16px;
   line-height: 18px;
@@ -1115,9 +1130,20 @@ body {
   background-color: rgb(251, 86, 90);
   border-radius: 3px;
   border: none;
+  outline: none;
 }
 
-/*соцсети в подвале*/
+.footer-contacts button:hover {
+  background-color: rgb(231, 66, 70);
+}
+
+.footer-contacts button:active {
+  background-color: rgba(215, 55, 59, 1);
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 rgb(193, 49, 53);
+  border-radius: 3px;
+}
+
 .footer-social-links {
   float:left;
   min-width: 260px;
@@ -1177,41 +1203,59 @@ body {
 
 .footer-social-item:active {
   background-color: rgba(215, 55, 59, 1);
+  box-shadow: inset 0 3px 0 0 rgb(193, 49, 53);
 }
 
 .footer-social-item:active::after {
   opacity: 0.3;
 }
 
-/*текст в подвале*/
 .footer-social-text {
   float: right;
-  width: 800px;
+  width: 760px;
+  padding-left: 40px;
 }
 
 .footer-social-text b {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
-  margin: 68px 0 9px 40px;
+  margin: 68px 0 10px 0;
   display: block;
+  color: rgb(0, 0, 0);
 }
 
 .footer-social-text p {
-  margin: 0 0 0 40px;
+  margin: 0 0 0 0;
+  line-height: 22px;
+  color: rgb(68, 68, 68);
+}
+
+.footer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: none;
 }
 
 .footer-form-modal {
-  position: absolute;
+  position: fixed;
   left: 50%;
-  top: 1706px;
+  top: 20%;
   width: 770px;
+  height: 450px;
   margin-left: -480px;
+  margin-right: -295px;
   padding: 70px 90px 70px 100px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   box-shadow: 0 15px 50px 0 rgb(100, 100, 100);
-  z-index: 40;
+  z-index: 50;
+  display: none;
 }
 
 .write-us-close {
@@ -1225,6 +1269,7 @@ body {
   height: 21px;
   background-color: rgb(255, 255, 255);
   opacity: 0.3;
+  outline: none;
 }
 
 .write-us-close::before,
@@ -1287,12 +1332,15 @@ body {
 .form-value {
   font-size: 16px;
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
   color: rgb(68, 68, 68);
   width: 343px;
   padding: 14px 0 14px 13px;
   margin: 6px 0px 0 0px;
   border: 2px solid rgb(215, 220, 222);
   border-radius: 3px;
+  outline: none;
 }
 
 .form-value:hover {
@@ -1316,8 +1364,12 @@ body {
   overflow: hidden;
   font-size: 16px;
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgb(68, 68, 68);
   padding: 10px 0 0 13px;
   margin: 6px 0 0 0;
+  outline: none;
 }
 
 .form-button {
@@ -1333,9 +1385,20 @@ body {
   background-color: rgb(251, 86, 90);
   border: none;
   border-radius: 3px;
+  outline: none;
 }
 
-/*чтоб не выпадало*/
+.form-button:hover {
+  background-color: rgb(231, 66, 70);
+}
+
+.form-button:active {
+  background-color: rgba(215, 55, 59, 1);
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 3px 0 0 rgb(193, 49, 53);
+  border-radius: 3px;
+}
+
 .clearfix::after {
   content: "";
   display: table;
