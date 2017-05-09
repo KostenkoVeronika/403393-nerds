@@ -143,25 +143,26 @@ body {
 }
 
 .filter-radio .filter-title {
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 .filter-radio .radio-grid {
   display: none;
 }
 
-.filter-radio .for-radio-grid {
+.filter-radio .radio-grid-label {
   margin: 14px 0px 20px 36px;
   display: block;
   position: relative;
   line-height: 20px;
+  cursor: pointer;
 }
 
-.for-radio-grid::before {
+.radio-grid-label::before {
   content: "";
   position: absolute;
-  top: -1px;
-  left: -34px;
+  top: -3px;
+  left: -35px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -171,21 +172,16 @@ body {
   cursor: pointer;
 }
 
-.for-radio-grid:hover::before {
+.radio-grid-label:hover::before {
   opacity: 1;
 }
 
-/*С ОБЁРТКОЙ ИЛИ СПИСКОМ НЕ РАБОТАЕТ!!!!!*/
-.radio-grid.adaptive:disabled ~ .for-radio-grid.adaptive::before,
-.radio-grid.fixated:disabled ~ .for-radio-grid.fixated::before,
-.radio-grid.rubber:disabled ~ .for-radio-grid.rubber::before {
+.radio-grid:disabled + .radio-grid-label::before {
   opacity: 0.1;
   cursor: default;
 }
 
-.radio-grid.adaptive:checked ~ .for-radio-grid.adaptive::before,
-.radio-grid.fixated:checked ~ .for-radio-grid.fixated::before,
-.radio-grid.rubber:checked ~ .for-radio-grid.rubber::before {
+.radio-grid:checked + .radio-grid-label::before {
   background-color: rgb(77, 77, 77);
   box-shadow: 
     inset 0 0 0 4px rgb(77, 77, 77),
@@ -194,14 +190,15 @@ body {
 
 .filter .features {
   margin-bottom: 0;
-  margin-top: -25px;
+  margin-top: -27px;
 }
 
-.features .for-checkbox-features {
-  margin: 14px 0px 20px 36px;
+.features .checkbox-features-label {
+  margin: 14px 0px 20px 37px;
   display: block;
   position: relative;
   line-height: 20px;
+  cursor: pointer;
 }
 
 .features .checkbox-features {
@@ -209,10 +206,11 @@ body {
 }
 
 .features .filter-title {
-  margin-bottom: 0;
+  margin-bottom: 2px;
+  margin-left: 1px;
 }
 
-.for-checkbox-features::before {
+.checkbox-features-label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -227,16 +225,15 @@ body {
   margin-top: -1px;
 }
 
-.for-checkbox-features:hover::before {
+.checkbox-features-label:hover::before {
   opacity: 1;
 }
 
-.checkbox-features:disabled ~ .for-checkbox-features::before {
+.checkbox-features:disabled + .checkbox-features-label::before {
   opacity: 0.1;
 }
 
-/*ВОТ ТАК ВОТ ОНО НЕ ПОЛУЧАЕТСЯ!!!!!*/
-.checkbox-features:checked ~ .for-checkbox-features::before {
+.checkbox-features:checked + .checkbox-features-label::before {
   width: 27px;
   height: 23px;
   box-shadow: none;
@@ -244,7 +241,7 @@ body {
   background-repeat: no-repeat;
   background-position: -63px -5px;
   top: 0;
-  left: -35px;
+  left: -36px;
 }
 
 .filter-result {
@@ -262,6 +259,7 @@ body {
   border-radius: 3px;
   padding: 15px 0 14px 0;
   outline: none;
+  cursor: pointer;
 }
 
 .filter-result:hover {
@@ -335,11 +333,11 @@ body {
   background-position: -189px -5px;
 }
 
-.sort-updown .sort-how:not(.sort-current):hover {
+.sort-updown .sort-how:not(.sort-current):hover::before {
   opacity: 0.4;
 }
 
-.sort-updown .sort-how:not(.sort-current):active {
+.sort-updown .sort-how:not(.sort-current):active::before {
   opacity: 1;
 }
 
@@ -393,27 +391,14 @@ body {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   position: relative;
-  /*ТОЧЕЧКИ ФОНОМ ВЫГЛЯДЯТ СТРАННО*/
-  /*background-image: url("../img/dots.png");
+  background-image: url("../img/dots.png");
   background-repeat: no-repeat;
-  background-position: 12px 10px;*/
+  background-position: 12px 10px;
 }
 
 .catalog-item:nth-child(2n) {
   margin-right: 0px;
 }
-
-/*ТОЧЕЧКИ КАК БЫЛО*/
-/*.catalog-item::before {
-  content: "";
-  position: absolute;
-  height: 14px;
-  width: 14px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  top: 12px;
-  left: 61px;
-}*/
 
 .catalog-item:hover {
   background-color: rgba(77, 77, 77, 1);
@@ -427,37 +412,19 @@ body {
   position: relative;
 }
 
-/*ТОЧЕЧКИ КАК БЫЛО*/
-/*.catalog-item-img::before,
-.catalog-item-img::after {
-  content: "";
-  position: absolute;
-  height: 14px;
-  width: 14px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-}
-
-.catalog-item-img::before {
-  top: -28px;
-  left: 15px;
-}
-
-.catalog-item-img::after {
-  top: -28px;
-  left: 38px;
-}*/
-
 .catalog-item-buy {
   display: none;
   font-size: 16px;
   line-height: 18px;
   position: absolute;
   bottom: 0;
-  width: 358px;
-  height: 232px;
+  width: 230px;
+  min-height: 161px;
+  max-height: 544px;
   color: rgb(102, 102, 102);
   background-color: rgb(238, 238, 238);
+  padding: 28px 64px 42px 64px;
+  overflow: auto;
 }
 
 .catalog-item:hover > .catalog-item-buy {
@@ -473,13 +440,16 @@ body {
   text-transform: uppercase;
   display: block;
   text-align: center;
-  margin: 29px 0 0 -3px;
+  width: 198px;
+  margin: 0px 0 0 15px;
 }
 
 .catalog-item-buy p {
   text-align: center;
-  margin-left: 4px;
+  margin-top: 15px;
   color: rgb(102, 102, 102);
+  width: 250px;
+  margin-left: -7px;
 }
 
 .catalog-buy-do {
@@ -490,10 +460,10 @@ body {
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   background-color: rgb(251, 86, 90);
-  width: 200px;
-  margin: 29px 0 0 79px;
+  width: 198px;
+  margin: 30px auto 0 auto;
   border-radius: 3px;
-  padding: 17px 0 14px 0;
+  padding: 17px 0 15px 2px;
 }
 
 .catalog-buy-do:hover {
@@ -502,6 +472,7 @@ body {
 
 .catalog-buy-do:active {
   background-color: rgb(215, 55, 59);
+  box-shadow: inset 0 3px 0 0 rgb(193, 49, 53);
 }
 
 .pagination {
@@ -511,7 +482,7 @@ body {
 
 .pagination-item {
   display: inline-block;
-  width: 50px;
+  min-width: 50px;
   vertical-align: middle;
   text-align: center;
   margin: 0 7px 0 0;
@@ -525,7 +496,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
-  padding: 17px 0 15px 0;
+  padding: 17px 20px 15px 20px;
   background-color: rgb(238, 238, 238);
   border-radius: 3px;
 }
@@ -595,11 +566,11 @@ body {
   padding: 26px 37px 10px 10px;
 }
 
-.main-navigation a:not(.current):hover {
+.main-navigation li:not(.current) a:not(.current):hover {
   color: rgb(251, 86, 90);
 }
 
-.main-navigation a:not(.current):active {
+.main-navigation li:not(.current) a:not(.current):active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -610,7 +581,8 @@ body {
 }
 
 .main-navigation .current::after,
-.cart .current::after {
+.cart.current > ::after,
+.cart-link.current::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -620,7 +592,8 @@ body {
   bottom: 5px;
 }
 
-.cart .current::after {
+.cart.current > ::after,
+.cart-link.current::after {
   right: 0;
   left: 47px;
 }
@@ -642,16 +615,15 @@ body {
   padding: 26px 0px 10px 86px;
 }
 
-.cart a:not(.current):hover {
+.cart:not(.current) a:not(.current):hover {
   color: rgb(251, 86, 90);
 }
 
-.cart a:not(.current):active {
-  color: rgb(0, 0, 0);
-  opacity: 0.3;
+.cart:not(.current) a:not(.current):active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.cart::before {
+.cart-link::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -665,22 +637,58 @@ body {
 
 .slider {
   position: relative;
-  height: 430px;
+  min-height: 430px;
   width: 1160px;
 }
 
+.slider-content {
+  padding-bottom: 80px;
+}
+
 .slider-item {
-  position: absolute;
-  overflow: auto;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding-top: 77px;
+}
+
+.slider-item::after {
+  content: "";
+  position: absolute;
+}
+
+.slider-item:nth-child(1)::after {
+  background-image: url("../img/slider-item1.png");
+  background-repeat: no-repeat;
+  width: 698px;
+  height: 413px;
+  bottom: -80px;
+  left: 431px;
+}
+
+.slider-item:nth-child(2)::after {
+  background-image: url("../img/slider-item2.png");
+  background-repeat: no-repeat;
+  width: 663px;
+  height: 430px;
+  bottom: -80px;
+  left: 496px;
+}
+
+.slider-item:nth-child(3)::after {
+  background-image: url("../img/slider-item3.png");
+  background-repeat: no-repeat;
+  width: 759px;
+  height: 411px;
+  bottom: -80px;
+  left: 401px;
 }
 
 .slider-title {
   display: block;
-  margin: 77px 0 26px 0;
+  margin: 0 0 26px 0;
   font-size: 55px;
   line-height: 55px;
   color: rgb(0,0,0);
@@ -690,7 +698,7 @@ body {
 
 .slider-item p {
   margin: 0;
-  width: 500px;
+  width: 408px;
 }
 
 .slider-item a {
@@ -717,24 +725,6 @@ body {
   background-color: rgba(215, 55, 59, 1);
   color: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 3px 0 0 rgb(193, 49, 53);
-}
-
-.slider-item:nth-child(1) {
-  background-image: url("../img/slider-item1.png");
-  background-repeat: no-repeat;
-  background-position: 431px 17px;
-}
-
-.slider-item:nth-child(2) {
-  background-image: url("../img/slider-item2.png");
-  background-repeat: no-repeat;
-  background-position: 495px 0;
-}
-
-.slider-item:nth-child(3) {
-  background-image: url("../img/slider-item3.png");
-  background-repeat: no-repeat;
-  background-position: 401px 18px;
 }
 
 .indicator-1,
@@ -802,12 +792,8 @@ body {
   text-align: center;
 }
 
-.hide {
-  display: none;
-}
-
 .advantages {
-  padding-bottom: 81px;
+  padding-bottom: 31px;
   padding-top: 30px;
   font-size: 0;
 }
@@ -819,6 +805,7 @@ body {
   vertical-align: bottom;
   margin-right: 100px;
   padding-top: 2px;
+  margin-bottom: 50px;
 }
 
 .advantages-title {
@@ -840,7 +827,7 @@ body {
   color: rgb(40, 49, 54);
 }
 
-.advantages-item a {
+.advantages-button {
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
@@ -848,7 +835,7 @@ body {
   text-transform: uppercase;
   display: block;
   width: 160px;
-  padding: 17px 0 16px 0;
+  padding: 16px 0 15px 0;
   text-align: center;
   margin-top: 32px;
   border-radius: 3px;
@@ -856,72 +843,54 @@ body {
   font-weight: 500;
 }
 
-.advantages-item:nth-child(1) a {
+.advantages-button.red {
   background-color: rgb(251, 86, 90);
 }
 
-.advantages-item:nth-child(1) a:hover {
+.advantages-button.red:hover {
   background-color: rgb(231, 66, 70);
 }
 
-.advantages-item:nth-child(1) a:active {
+.advantages-button.red:active {
   background-color: rgba(215, 55, 59, 1);
   color: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 3px 0 0 rgb(193, 49, 53);
 }
 
-.advantages-item:nth-child(2) a {
+.advantages-button.green {
   background-color: rgb(0, 202, 116);
 }
 
-.advantages-item:nth-child(2) a:hover {
+.advantages-button.green:hover {
   background-color: rgb(0, 188, 108);
 }
 
-.advantages-item:nth-child(2) a:active {
+.advantages-button.green:active {
   background-color: rgba(0, 170, 98, 1);
   color: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 3px 0 0 rgb(0, 153, 88);
 }
 
-.advantages-item:nth-child(3) a {
+.advantages-button.yellow {
   background-color: rgb(239, 200, 73);
 }
 
-.advantages-item:nth-child(3) a:hover {
+.advantages-button.yellow:hover {
   background-color: rgb(234, 181, 52);
 }
 
-.advantages-item:nth-child(3) a:active {
+.advantages-button.yellow:active {
   background-color: rgba(229, 167, 34, 1);
   color: rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 3px 0 0 rgb(206, 150, 31);
 }
-
-/*.advantages-item:nth-child(3n-2) {
-  background-image: url("../img/advantages-site1.png");
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-}
-
-.advantages-item:nth-child(3n-1) {
-  background-image: url("../img/advantages-site2.png");
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-}
-
-.advantages-item:nth-child(3n) {
-  background-image: url("../img/advantages-site3.png");
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-}*/
 
 .advantages-item:nth-child(3n) {
   margin-right: 60px;
 }
 
 .studio {
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 50px;
   border-bottom: 2px solid rgb(238, 238, 238);
 }
@@ -929,6 +898,7 @@ body {
 .studio-about {
   width: 660px;
   float: left;
+  padding-top: 33px;
 }
 
 .studio-about-us {
@@ -936,7 +906,7 @@ body {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-  margin: 33px 0 33px 0;
+  margin: 0 0 33px 0;
   color: rgb(0, 0, 0);
 }
 
@@ -1090,13 +1060,16 @@ body {
 
 .footer-contacts {
   background-color: rgb(255, 255, 255);
-  width: 269px;
+  width: 219px;
   float: left;
   position: absolute;
   z-index: 20;
   top: 54px;
   left: 20px;
   padding-left: 50px;
+  padding-bottom: 47px;
+  padding-top: 49px;
+  padding-right: 50px;
 }
 
 .footer-contacts h4 {
@@ -1104,7 +1077,7 @@ body {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 49px 0 23px 0;
+  margin: 0 0 23px 0;
   display: block;
   color: rgb(0, 0, 0);
 }
@@ -1119,8 +1092,8 @@ body {
   display: block;
   text-align: center;
   width: 220px;
-  margin: 36px 0 47px 0;
-  height: 50px;
+  margin: 36px 0 0 0;
+  min-height: 50px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1147,6 +1120,8 @@ body {
 .footer-social-links {
   float:left;
   min-width: 260px;
+  padding-top: 62px;
+  padding-bottom: 10px;
 }
 
 .footer-social-item {
@@ -1157,7 +1132,7 @@ body {
   border-radius: 50%;
   font-size: 0px;
   vertical-align: middle;
-  margin: 62px 10px 0 0;
+  margin: 0 10px 0 0;
   position: relative;
 }
 
@@ -1214,13 +1189,15 @@ body {
   float: right;
   width: 760px;
   padding-left: 40px;
+  padding-top: 68px;
+  padding-bottom: 10px;
 }
 
 .footer-social-text b {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
-  margin: 68px 0 10px 0;
+  margin: 0 0 10px 0;
   display: block;
   color: rgb(0, 0, 0);
 }
@@ -1245,11 +1222,11 @@ body {
 .footer-form-modal {
   position: fixed;
   left: 50%;
-  top: 20%;
+  top: 50%;
   width: 770px;
   height: 450px;
   margin-left: -480px;
-  margin-right: -295px;
+  margin-top: -295px;
   padding: 70px 90px 70px 100px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -1343,15 +1320,18 @@ body {
   outline: none;
 }
 
-.form-value:hover {
+.form-value:hover,
+.form-letter textarea:hover {
   border-color: rgb(180, 185, 187);
 }
 
-.form-value:focus {
+.form-value:focus,
+.form-letter textarea:focus {
   border-color: rgb(0, 0, 0);
 }
 
-.focus-value:invalid {
+.focus-value:invalid
+.form-letter textarea:invalid {
   border-color: rgb(231, 66, 70);
   color: rgb(231, 66, 70);
 }
@@ -1370,6 +1350,7 @@ body {
   padding: 10px 0 0 13px;
   margin: 6px 0 0 0;
   outline: none;
+  resize: none;
 }
 
 .form-button {

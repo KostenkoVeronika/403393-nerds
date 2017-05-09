@@ -22,8 +22,8 @@
               <li>
                 <a href="#">Клиенты</a>
               </li>
-              <li>
-                <a class="current">Магазин</a>
+              <li class="current">
+                <a>Магазин</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -56,34 +56,40 @@
           </fieldset>
           <fieldset class="filter-radio">
             <legend class="filter-title">Сетка:</legend>
-            <input class="radio-grid adaptive" type="radio" name="grid" id="radio-grid1" value="adaptive" checked>
-            <label class="for-radio-grid adaptive" for="radio-grid1">Адаптивная</label>
-            <input class="radio-grid fixated" type="radio" name="grid" id="radio-grid2" value="fixated" disabled>
-            <label class="for-radio-grid fixated" for="radio-grid2">Фиксированная</label>
-            <input class="radio-grid rubber" type="radio" name="grid" id="radio-grid3" value="rubber">
-            <label class="for-radio-grid rubber" for="radio-grid3">Резиновая</label>
+            <div>
+              <input class="radio-grid" type="radio" name="grid" id="radio-grid-1" value="adaptive" checked>
+              <label class="radio-grid-label" for="radio-grid-1">Адаптивная</label>
+            </div>
+            <div>
+              <input class="radio-grid" type="radio" name="grid" id="radio-grid-2" value="fixated">
+              <label class="radio-grid-label" for="radio-grid-2">Фиксированная</label>
+            </div>
+            <div>
+              <input class="radio-grid" type="radio" name="grid" id="radio-grid-3" value="rubber">
+              <label class="radio-grid-label" for="radio-grid-3">Резиновая</label>
+            </div>
           </fieldset>
           <fieldset class="features">
             <legend class="filter-title">Особенности:</legend>
             <div>
-              <input class="checkbox-features" type="checkbox" id="checkbox-features" checked>
-              <label class="for-checkbox-features" for="checkbox-features" >Слайдер</label>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features-1" checked>
+              <label class="checkbox-features-label" for="checkbox-features-1" >Слайдер</label>
             </div>
             <div>
-              <input class="checkbox-features" type="checkbox" id="checkbox-features" disabled>
-              <label class="for-checkbox-features" for="checkbox-features">Блок преимуществ</label>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features-2">
+              <label class="checkbox-features-label" for="checkbox-features-2">Блок преимуществ</label>
             </div>
             <div>
-              <input class="checkbox-features" type="checkbox" id="checkbox-features" checked>
-              <label class="for-checkbox-features" for="checkbox-features">Новости</label>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features-3" checked>
+              <label class="checkbox-features-label" for="checkbox-features-3">Новости</label>
             </div>
             <div>
-              <input class="checkbox-features" type="checkbox" id="checkbox-features">
-              <label class="for-checkbox-features" for="checkbox-features">Галерея</label>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features-4">
+              <label class="checkbox-features-label" for="checkbox-features-4">Галерея</label>
             </div>
             <div>
-              <input class="checkbox-features" type="checkbox" id="checkbox-features">
-              <label class="for-checkbox-features" for="checkbox-features">Корзина</label>
+              <input class="checkbox-features" type="checkbox" id="checkbox-features-5">
+              <label class="checkbox-features-label" for="checkbox-features-5">Корзина</label>
             </div>
           </fieldset>
           <input class="filter-result" type="submit" value="Показать">
@@ -104,7 +110,7 @@
             </div>
           </div>
         </div>
-        <div class="catalog"><!--только для карточек товаров-->
+        <div class="catalog">
           <article class="catalog-item">
             <div class="catalog-item-img">
               <img src="img/catalog-item-sedona.jpg" alt="Sedona" width="358" height="574">
