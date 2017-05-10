@@ -130,9 +130,7 @@
     </main>
     <footer class="main-footer">
       <div class="container footer-top">
-        <div class="footer-map">
-          <img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">
-        </div>
+        
         <section class="footer-contacts">
             <h4>Nёrds design studio</h4>
             <p>
@@ -141,8 +139,12 @@
             ул. Б. Конюшенная, д. 19/8
             </p>
             <p>тел. +7 (812) 275-75-75</p>
-            <button>Напишите нам</button>
+            <a href="">Напишите нам</a>
         </section>
+      </div>
+      <div class="footer-map">
+        <iframe src="https://api-maps.yandex.ru/frame/v1/-/C6qDU2Lc" width="100%" height="416" frameborder="0"></iframe>
+        <!--<img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">-->
       </div>
       <div class="container footer-bottom clearfix">
         <section class="footer-social-links">
@@ -162,21 +164,22 @@
           <div class="clearfix">
             <div class="form-name">
               <label for="name">Ваше имя:</label>
-              <input class="form-value" id="name"  placeholder="Представьтесь, пожалуйста">
+              <input class="form-value" id="name" name="yourname"  placeholder="Представьтесь, пожалуйста">
             </div>
             <div class="form-email">
               <label for="e-mail">Ваш e-mail:</label>
-              <input class="form-value" id="e-mail" placeholder="Для отправки ответа">
+              <input class="form-value" id="e-mail" name="youremail" placeholder="Для отправки ответа">
             </div>
           </div>
           <div class="form-letter">
             <label for="letter">Текст письма:</label>
-            <textarea id="letter" placeholder="В свободной форме"></textarea>
+            <textarea id="letter" name="yourletter" placeholder="В свободной форме"></textarea>
           </div>
           <input class="form-button" type="submit" value="Отправить">
         </form>
       </div>
       <div class="footer-modal-overlay"></div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
