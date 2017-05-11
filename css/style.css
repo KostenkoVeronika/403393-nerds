@@ -1066,13 +1066,15 @@ body {
 
 .footer-top {
   position: relative;
-  height: 416px;
 }
 
 .footer-map {
   position: relative;
   width: 100%;
-  margin-top: 2px;
+  height: 416px;
+  background-image: url("../img/footer-map-small.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 .footer-map iframe {
@@ -1081,24 +1083,17 @@ body {
   bottom: 0;
 }
 
-/*.footer-map-image {
-  height: 416px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
 .footer-contacts {
   background-color: rgb(255, 255, 255);
   width: 219px;
   float: left;
   position: absolute;
   z-index: 20;
-  top: 55px;
+  top: 54px;
   left: 20px;
   padding-left: 50px;
   padding-bottom: 47px;
-  padding-top: 49px;
+  padding-top: 50px;
   padding-right: 50px;
 }
 
