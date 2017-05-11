@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/stylemin.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container header-container">
         <div class="main-header-top clearfix">
           <div class="logo-main">
             <img src="img/logo-main.png" alt="Логотип Нёрдс" width="160" height="65"> 
@@ -23,7 +23,7 @@
                 <a href="#">Клиенты</a>
               </li>
               <li>
-                <a href="#">Магазин</a>
+                <a href="catalog.html">Магазин</a>
               </li>
               <li>
                 <a href="#">Контакты</a>
@@ -35,25 +35,30 @@
           </div>
         </div>
         <div class="slider">
-          <div class="slider-item">
-            <b class="slider-title">Долго, дорого, скрупулезно.</b>
-            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <a href="#">Узнать больше</a>
+          <input type="radio"  class="indicator-1" id="indicator-1" name="toggle" checked>
+          <input type="radio"  class="indicator-2" id="indicator-2" name="toggle">
+          <input type="radio"  class="indicator-3" id="indicator-3" name="toggle">
+          <div class="slider-indicator">
+             <label class="for-indicator-1" for="indicator-1"></label>
+             <label class="for-indicator-2" for="indicator-2"></label>
+             <label class="for-indicator-3" for="indicator-3"></label>
           </div>
-          <div class="slider-item hide">
-            <b class="slider-title">Любим математику как никто другой</b>
-            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-            <a href="#">Узнать больше</a>
-          </div>
-          <div class="slider-item hide">
-            <b class="slider-title">Только ночь, только хардкор</b>
-            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-            <a href="#">Узнать больше</a>
-          </div>
-          <div class="slider-indicator hide">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
+          <div class="slider-content">
+            <div class="slider-item">
+              <b class="slider-title">Долго, дорого, скрупулезно.</b>
+              <p>Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.</p>
+              <a href="#">Узнать больше</a>
+            </div>
+            <div class="slider-item">
+              <b class="slider-title">Любим математику как никто другой</b>
+              <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+              <a href="#">Узнать больше</a>
+            </div>
+            <div class="slider-item">
+              <b class="slider-title">Только ночь, <br> только хардкор</b>
+              <p>Работать днем, как все? Мы против этого. <br> Ближе к полуночи работа только начинается.</p>
+              <a href="#">Узнать больше</a>
+            </div>
           </div>
         </div>
       </div>
@@ -61,26 +66,29 @@
     <main class="container clearfix">
       <div class="advantages">
         <article class="advantages-item">
+          <img src="img/advantages-site1.png" alt="advantages-site" width="300" height="146">
           <h2 class="advantages-title">Веб-сайты</h2>
           <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
-          <a href="#">Заказать</a>
+          <a class="advantages-button red" href="#">Заказать</a>
         </article>
         <article class="advantages-item">
+         <img src="img/advantages-site2.png" alt="advantages-app" width="300" height="146">
           <h2 class="advantages-title">Приложения</h2>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a href="#">Заказать</a>
+          <a class="advantages-button green" href="#">Заказать</a>
         </article>
         <article class="advantages-item">
+         <img src="img/advantages-site3.png" alt="advantages-presentation" width="300" height="146">
           <h2 class="advantages-title">Презентации</h2>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a href="#">Заказать</a>
+          <a class="advantages-button yellow" href="#">Заказать</a>
         </article>
       </div>
       <div class="studio clearfix">
         <div class="studio-about">
-          <b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
+          <b class="studio-about-us">Мы &mdash; маленькая, но гордая дизайн-студия из Краснодара.</b>
           <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-          <b>Выполняем заказы на разработку:</b>
+          <b class="studio-about-orders">Выполняем заказы на разработку:</b>
           <ul class="studio-about-list">
             <li>Веб-сайтов любой сложности</li>
             <li>Мобильных приложений для iOS и Android</li>
@@ -90,18 +98,19 @@
         <div class="studio-addition">
           <img class="logo-color" src="img/studio-logo-color.png" alt="Цветной логотип" width="360" height="208">
           <b>С 2004 года любим точность во всем:</b>
-          <table class="studio-addition-table">
-            <tr class="studio-table-percent">
-              <td>146%</td>
-              <td>100%</td>
-              <td>50%</td>
-            </tr>
-            <tr class="studio-table-meaning">
-              <td>Уровень самоотдачи</td>
-              <td>Соблюдение сроков</td>
-              <td>Минимальная предоплата</td>
-            </tr>
-          </table>
+          <ul class="studio-table">
+            <li>
+              <p class="studio-percent">146<sup>%</sup></p>
+              <p class="studio-meaning">Уровень самоотдачи</p>
+            </li>
+            <li>
+              <p class="studio-percent">100<sup>%</sup></p>
+              <p class="studio-meaning">Соблюдение сроков</p>
+            </li><li>
+              <p class="studio-percent">50<sup>%</sup></p>
+              <p class="studio-meaning">Минимальная предоплата</p>
+            </li>
+          </ul>
         </div>
       </div>  
       <ul class="studio-partners">
@@ -121,10 +130,8 @@
     </main>
     <footer class="main-footer">
       <div class="container footer-top">
-        <div class="footer-map">
-          <img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">
-        </div>
-        <section class="footer-contacts hide">
+        
+        <section class="footer-contacts">
             <h4>Nёrds design studio</h4>
             <p>
             191186, Санкт-Петербург, 
@@ -132,33 +139,47 @@
             ул. Б. Конюшенная, д. 19/8
             </p>
             <p>тел. +7 (812) 275-75-75</p>
-            <button>Напишите нам</button>
+            <a href="#">Напишите нам</a>
         </section>
+      </div>
+      <div class="footer-map">
+        <iframe src="https://api-maps.yandex.ru/frame/v1/-/C6qDU2Lc" width="100%" height="416" frameborder="0"></iframe>
+        <!--<img class = "footer-map-image" src="img/footer-map-small.png" alt="map" width="1160" height="416">-->
       </div>
       <div class="container footer-bottom clearfix">
         <section class="footer-social-links">
-          <a class="footer-social-vk" href="#">vk</a>
-          <a class="footer-social-fb" href="#">fb</a>
-          <a class="footer-social-ig" href="#">ig</a>
+          <a class="footer-social-item vk" href="#">vk</a>
+          <a class="footer-social-item fb" href="#">fb</a>
+          <a class="footer-social-item ig" href="#">ig</a>
         </section>
         <div class="footer-social-text">
           <b>Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-      <div class="footer-form">
-        <form class="footer-write-us hide" action="#" method="post">
+      <div class="footer-form-modal">
+        <form class="footer-write-us" action="#" method="post">
           <span>Напишите нам</span>
           <button class="write-us-close">X</button>
-          <label for="name">Ваше имя:</label>
-          <input id="name" placeholder="Представьтесь, пожалуйста">
-          <label for="e-mail">Ваш e-mail:</label>
-          <input id="e-mail" placeholder="Для отправки ответа">
-          <label for="letter">Текст письма:</label>
-          <textarea id="letter" placeholder="В свободной форме"></textarea>
-          <input type="submit" value="Отправить">
+          <div class="clearfix">
+            <div class="form-name">
+              <label for="name">Ваше имя:</label>
+              <input class="form-value" id="name" name="yourname"  placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="form-email">
+              <label for="e-mail">Ваш e-mail:</label>
+              <input class="form-value" id="e-mail" name="youremail" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <div class="form-letter">
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" name="yourletter" placeholder="В свободной форме"></textarea>
+          </div>
+          <input class="form-button" type="submit" value="Отправить">
         </form>
       </div>
+      <div class="footer-modal-overlay"></div>
     </footer>
+    <script src="js/scriptmin.js"></script>
   </body>
 </html>
