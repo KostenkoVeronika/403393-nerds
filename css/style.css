@@ -723,11 +723,12 @@ body {
 
 .slider-item:first-child .slider-title {
   width: 380px;
+  word-break: break-all;
 }
 
 .slider-item p {
   margin: 0;
-  width: 408px;
+  width: 500px;
 }
 
 .slider-item a {
